@@ -57,9 +57,13 @@ At the end of this project you are expected to be able to explain to anyone, wit
 |1 | **Mandatory**  | Write a Shell script that runs Python code.<br><br>The Python code will be saved in the environment variable `$PYCODE`| File: [1-run_inline](./1-run_inline) |
 |2 | **Mandatory**  | Write a Python script that prints exactly `"Programming is like building a multilingual puzzle`, followed by a new line.<br><br>Use the function print | File: [2-print.py](./2-print.py) |
 |3 | **Mandatory**  | Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py) in order to print the integer stored in the variable `number`, followed by `Battery street`, followed by a new line.<ul><li>The output of the script should be:</li><ul><li>the number, followed by Battery street,</li><li>followed by a new line</li></ul><li>You are not allowed to cast the variable number into a string</li><li>Your code must be 3 lines long</li><li>You have to use the new print numbers tips</li></ul> | File: [3-print_number.py](./3-print_number.py) |
-
-|2 | **Mandatory**  | <br><br> | File: [](./) |
-|2 | **Mandatory**  | <br><br> | File: [](./) |
-|2 | **Mandatory**  | <br><br> | File: [](./) |
-|2 | **Mandatory**  | <br><br> | File: [](./) |
-|4 | *Advanced* | Write a 64-bit program in assembly that prints Hello, Holberton, followed by a new line. | File: [101-hello_holberton.asm](./101-hello_holberton.asm) |
+|4 | **Mandatory**  | Complete the source code in order to print the float stored in the variable `number` with a precision of 2 digits.<br><br> | File: [4-print_float.py](./4-print_float.py) |
+|5 | **Mandatory**  | Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/master/5-print_string.py) in order to print 3 times a string stored in the variable `str`, followed by its first 9 characters.<br><br> | File: [5-print_string.py](./5-print_string.py) |
+|6 | **Mandatory**  | Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py) to print `Welcome to Holberton School!`<br><br> | File: [6-concat.py](./6-concat.py) |
+|7 | **Mandatory**  | Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py)<br><br><ul><li>You are not allowed to use any loops or conditional statements</li><li>Your program should be exactly 8 lines long</li><li>`word_first_3` should contain the first 3 letters of the variable `word`</li><li>`word_last_2` should contain the last 2 letters of the variable `word`</li><li>`middle_word` should contain the value of the variable `word` without the first and last letters</li></ul> | File: [7-edges.py](./7-edges.py) |
+|8 | **Mandatory**  | Complete this source code to print object-oriented programming with Python, followed by a new line.<br><br> | File: [8-concat_edges.py](./8-concat_edges.py) |
+|9 | **Mandatory**  | Write a Python script that prints "The Zen of Python", by Tim Peters, followed by a new line.<br><br>Your script should be maximum 98 characters long (please check with `wc -m 9-easter_egg.py`) | File: [9-easter_egg.py](./9-easter_egg.py) |
+10 | *Advanced* | ? | File: [](./) |
+11 | *Advanced* | ? | File: [](./) |
+12 | *Advanced* | ? | File: [](./) |
+13 | *Advanced* | ? | File: [](./) |
