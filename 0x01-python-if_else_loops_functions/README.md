@@ -1,7 +1,7 @@
 # 0x01. Python - if/else, loops, functions
+![image](https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png)
 **Author: [Elaine Yeung](https://twitter.com/egsy)**
 *Holberton School | January 2017 Batch 2*
-![image](https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png)
 
 ## Synopsis
 This project is completed as an introduction to the Python programming language.
