@@ -1,6 +1,8 @@
 # 0x01. Python - if/else, loops, functions
 ![image](https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png)
+
 **Author: [Elaine Yeung](https://twitter.com/egsy)**
+
 *Holberton School | January 2017 Batch 2*
 
 ## Synopsis
@@ -38,19 +40,27 @@ At the end of this project students are expected to be able to explain to anyone
 - The length of your files will be tested using `wc`
 
 ### Resources
-- Read the first three chapters of [The Python tutorial](https://docs.python.org/3.4/tutorial/index.html): [Whetting Your Appetite](https://docs.python.org/3.4/tutorial/appetite.html), [Using the Python Interpreter](https://docs.python.org/3.4/tutorial/interpreter.html) and [An Informal Introduction to Python](https://docs.python.org/3.4/tutorial/introduction.html). For this last chapter (An Informal Introduction to Python), read until 3.1.2. Strings included (you do not have to read '3.1.3 Lists').
-- Watch: [Learn to Program](https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt).
+- Read the chapter [More Control Flow Tools](https://docs.python.org/3.4/tutorial/controlflow.html) of [The Python tutorial](https://docs.python.org/3.4/tutorial/index.html). Read until 4.6. Defining Functions included (you do not have to read '4.7. More on Defining Functions').
+- Also, read these resources: [Myths about Indentation](http://www.secnetix.de/olli/Python/block_indentation.hawk) and [Indentation Error](https://www.youtube.com/watch?v=1QXOd2ZQs-Q).
+- Watch: [Learn to Program](https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt) and [Learn to Program 2 : Looping](https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt).
 - Python's got style! [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/).
-- install it: `sudo apt-get install python3-pep8 (version 1.7)`
- - alternative install using `pip3` (Python3 version of `pip`): [Install](https://pep8.readthedocs.io/en/release-1.7.x/intro.html#installation)
- - If /usr/bin/pep8 doesn’t exist, pep8 is located here /usr/local/lib/python3.4/dist-packages/pep8.py or /usr/lib/python3.4/dist-packages/pep8.py (cp /usr/local/lib/python3.4/dist-packages/pep8.py /usr/bin/pep8 && chmod u+x /usr/bin/pep8 or cp /usr/lib/python3.4/dist-packages/pep8.py /usr/bin/pep8 && chmod u+x /usr/bin/pep8)
-- use it: pep8 file.py
-... and of course, last but not least: `man python3`
+...and of course, last but not least: `man python3`
 
 ## Project Breakdown
 | Task # | Type | Short description | File name and link |
 | ---: | --- | --- | --- |
-|0| **Mandatory**  | <br><br> | File: [0-positive_or_negative.py](./0-positive_or_negative.py)|
+|0| **Mandatory**  | <br><br>
+This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print whether the number stored in the variable number is positive or negative.
+
+You can find the source code here
+The variable number will store a different value every time you will run this program
+You don't have to understand what import, random. randint do. Please do not touch this code
+The output of the program should be:
+The number, followed by
+if the number is greater than 0: is positive
+if the number is 0: is zero
+if the number is less than 0: is negative
+followed by a new line | File: [0-positive_or_negative.py](./0-positive_or_negative.py)|
 |1| **Mandatory**  | <br><br> | File: [1-last_digit.py](./1-last_digit.py)|
 |2| **Mandatory**  | <br><br> | File: [2-print_alphabet.py](./2-print_alphabet.py)|
 |3| **Mandatory**  | <br><br> | File: [3-print_alphabt.py](./3-print_alphabt.py)|
@@ -64,3 +74,4 @@ At the end of this project students are expected to be able to explain to anyone
 |11| **Mandatory**  | <br><br> | File: [11-pow.py](./11-pow.py)|
 |12| **Mandatory**  | <br><br> | File: [12-fizzbuzz.py](./12-fizzbuzz.py)|
 13 | *Advanced* | ? | File: [](./) |
+
