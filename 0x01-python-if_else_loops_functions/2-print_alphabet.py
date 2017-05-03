@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-a = 'abcdefghijklmnopqrstuvwxyz'
-print(a)
+for i in range(ord('a'), ord('z')+1):
+        print('{}'.format(chr(i)))
