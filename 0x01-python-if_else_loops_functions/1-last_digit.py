@@ -5,11 +5,12 @@ if number < 0:
     n = number % -10
 elif number >= 0:
     n = number % 10
-print('Last digit of {:d} is {:d}'.format(number, n)) +
 if n > 5:
-    print('and is greater than 5')
+    print('Last digit of {:d} is {:d} '
+          'and is greater than 5'.format(number, n))
 elif n == 0:
-    print('and is 0')
+    print('Last digit of {:d} is {:d} '
+          'and is 0'.format(number, n))
 elif n < 6:
-    print('and is less than 6 and not 0')
-    
+    print('Last digit of {:d} is {:d} '
+          'and is less than 6 and not 0'.format(number, n))
