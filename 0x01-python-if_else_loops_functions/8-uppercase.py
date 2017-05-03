@@ -4,4 +4,4 @@ def uppercase(str):
            ord(c) <= ord('z'):
             c = chr(ord(c) - ord(' '))
         print('{:s}'.format(c), end='')
-    print()
+    print(\n, end='')
