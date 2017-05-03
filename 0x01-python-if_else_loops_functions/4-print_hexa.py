@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-for i in range(0, 98 + 1):
-    print('{}'.format(chr(i)))
+for i in range(0, 99):
+    print(i, ' = ', i)
+    
     
