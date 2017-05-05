@@ -9,4 +9,6 @@ if __name__ == "__main__":
     if count > 2:
         print("{:d} arguments:".format(count)
     for i in range(1, count):
-       print("{:d}\n {}".format(count, sys.argv[1:]))
+       print("{:d} {:s}".format(i, sys.argv[i]))
+
+
