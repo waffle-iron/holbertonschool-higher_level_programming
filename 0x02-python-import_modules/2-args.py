@@ -7,8 +7,8 @@ if __name__ == "__main__":
     if count == 2:
         print ("1 argument:")
     if count > 2:
-        print("{:d} arguments:".format(count)
+        print("{:d}: arguments:".format(count))
     for i in range(1, count):
-       print("{:d} {:s}".format(i, sys.argv[i]))
+       print("{:d}: {:s}".format(i, sys.argv[i]))
 
 
