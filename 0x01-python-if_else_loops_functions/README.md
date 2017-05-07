@@ -69,12 +69,12 @@ At the end of this project we are expected to be able to explain to anyone, with
 #### Python Bytecode
 <pre><code>
 3           0 LOAD_FAST                0 (a)
-3 LOAD_FAST                1 (b)
-6 COMPARE_OP               0 (&lt;)
-9 POP_JUMP_IF_FALSE       16
+            3 LOAD_FAST                1 (b)
+            6 COMPARE_OP               0 (&lt;)
+            9 POP_JUMP_IF_FALSE       16
 										  
 4          12 LOAD_FAST                2 (c)
-15 RETURN_VALUE
+           15 RETURN_VALUE
 														 
 5     &gt;&gt;   16 LOAD_FAST                2 (c)
 19 LOAD_FAST                1 (b)
