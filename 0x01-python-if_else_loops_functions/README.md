@@ -11,7 +11,7 @@ This project is completed as an introduction to the Python programming language.
 
 ### What students should learn from this project
 
-At the end of this project students are expected to be able to explain to anyone, without the help of Google:
+At the end of this project we are expected to be able to explain to anyone, without the help of Google:
 - Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
 - Why indentation is so important in Python
 - How to use the `if`, `if ... else` statements
@@ -49,19 +49,8 @@ At the end of this project students are expected to be able to explain to anyone
 ## Project Breakdown
 | Task # | Type | Short description | File name and link |
 | ---: | --- | --- | --- |
-|0| **Mandatory**  | <br><br>
-This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print whether the number stored in the variable number is positive or negative.
-
-You can find the source code here
-The variable number will store a different value every time you will run this program
-You don't have to understand what import, random. randint do. Please do not touch this code
-The output of the program should be:
-The number, followed by
-if the number is greater than 0: is positive
-if the number is 0: is zero
-if the number is less than 0: is negative
-followed by a new line | File: [0-positive_or_negative.py](./0-positive_or_negative.py)|
-|1| **Mandatory**  | <br><br> | File: [1-last_digit.py](./1-last_digit.py)|
+|0| **Mandatory**  | <p>This program will assign a random signed number to the variable <code>number</code> each time it is executed. Complete the source code in order to print whether the number stored in the variable <code>number</code> is positive or negative.</p>    <ul>  <li>You can find the source code <a href="https://github.com/holbertonschool/0x01.py/blob/master/0-positive_or_negative_py">here</a></li>  <li>The variable <code>number</code> will store a different value every time you will run this program</li>  <li>You don&#39;t have to understand what <code>import</code>, <code>random. randint</code> do. Please do not touch this code</li>  <li>The output of the program should be:    <ul>  <li>The number, followed by    <ul>  <li>if the number is greater than 0: <code>is positive</code></li>  <li>if the number is 0: <code>is zero</code></li>  <li>if the number is less than 0: <code>is negative</code></li>  </ul></li>  <li>followed by a new line</li>  </ul></li>  </ul> | File: [0-positive_or_negative.py](./0-positive_or_negative.py)|
+|1| **Mandatory**  | <p>This program will assign a random signed number to the variable <code>number</code> each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable <code>number</code>.</p><ul><li>You can find the source code <a href="https://github.com/holbertonschool/0x01.py/blob/master/1-last_digit_py">here</a></li><li>The variable <code>number</code> will store a different value every time you will run this program</li><li>You don&#39;t have to understand what <code>import</code>, <code>random. randint</code> do. Please do not touch this code</li><li>The output of the program should be:<ul><li>The string <code>Last digit of</code>, followed by</li><li>the number, followed by</li><li>the string <code>is</code>, followed by<ul><li>if the number is greater than 5: the string <code>and is greater than 5</code></li><li>if the number is 0: the string <code>and is 0</code></li><li>if the number is less than 6 and not 0: the string <code>and is less than 6 and not 0</code></li></ul></li><li>followed by a new line</li></ul></li></ul> | File: [1-last_digit.py](./1-last_digit.py)|
 |2| **Mandatory**  | <br><br> | File: [2-print_alphabet.py](./2-print_alphabet.py)|
 |3| **Mandatory**  | <br><br> | File: [3-print_alphabt.py](./3-print_alphabt.py)|
 |4| **Mandatory**  | <br><br> | File: [4-print_hexa.py](./4-print_hexa.py)|
