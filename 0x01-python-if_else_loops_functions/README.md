@@ -51,91 +51,14 @@ At the end of this project we are expected to be able to explain to anyone, with
 | ---: | --- | --- | --- |
 |0| **Mandatory**  | <p>This program will assign a random signed number to the variable <code>number</code> each time it is executed. Complete the source code in order to print whether the number stored in the variable <code>number</code> is positive or negative.</p>    <ul>  <li>You can find the source code <a href="https://github.com/holbertonschool/0x01.py/blob/master/0-positive_or_negative_py">here</a></li>  <li>The variable <code>number</code> will store a different value every time you will run this program</li>  <li>You don&#39;t have to understand what <code>import</code>, <code>random. randint</code> do. Please do not touch this code</li>  <li>The output of the program should be:    <ul>  <li>The number, followed by    <ul>  <li>if the number is greater than 0: <code>is positive</code></li>  <li>if the number is 0: <code>is zero</code></li>  <li>if the number is less than 0: <code>is negative</code></li>  </ul></li>  <li>followed by a new line</li>  </ul></li>  </ul> | File: [0-positive_or_negative.py](./0-positive_or_negative.py)|
 |1| **Mandatory**  | <p>This program will assign a random signed number to the variable <code>number</code> each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable <code>number</code>.</p><ul><li>You can find the source code <a href="https://github.com/holbertonschool/0x01.py/blob/master/1-last_digit_py">here</a></li><li>The variable <code>number</code> will store a different value every time you will run this program</li><li>You don&#39;t have to understand what <code>import</code>, <code>random. randint</code> do. Please do not touch this code</li><li>The output of the program should be:<ul><li>The string <code>Last digit of</code>, followed by</li><li>the number, followed by</li><li>the string <code>is</code>, followed by<ul><li>if the number is greater than 5: the string <code>and is greater than 5</code></li><li>if the number is 0: the string <code>and is 0</code></li><li>if the number is less than 6 and not 0: the string <code>and is less than 6 and not 0</code></li></ul></li><li>followed by a new line</li></ul></li></ul> | File: [1-last_digit.py](./1-last_digit.py)|
-|2| **Mandatory**  | <p>Write a program that prints the alphabet, in lowercase, not followed by a new line.</p>
-
-<ul>
-<li>You can only use one <code>print</code> function with string format</li>
-<li>You can only use one loop in your code</li>
-<li>You are not allowed to store characters in a variable</li>
-<li>You are not allowed to import any module</li>
-</ul>| File: [2-print_alphabet.py](./2-print_alphabet.py)|
-|3| **Mandatory**  |  <p>Write a program that prints the alphabet, in lowercase, not followed by a new line.</p>
-
-<ul>
-<li>Print all the letters except <code>q</code> and <code>e</code></li>
-<li>You can only use one <code>print</code> function with string format</li>
-<li>You can only use one loop in your code</li>
-<li>You are not allowed to store characters in a variable</li>
-<li>You are not allowed to import any module</li>
-</ul>| File: [3-print_alphabt.py](./3-print_alphabt.py)|
-|4| **Mandatory**  |  <p>Write a program that prints all numbers from <code>0</code> to <code>98</code> in decimal and in hexadecimal (as in the following example)</p>
-
-<ul>
-<li>You can only use one <code>print</code> function with string format</li>
-<li>You can only use one loop in your code</li>
-<li>You are not allowed to store numbers or strings in a variable</li>
-<li>You are not allowed to import any module</li>
-</ul>| File: [4-print_hexa.py](./4-print_hexa.py)|
-|5| **Mandatory**  |  <p>Write a program that prints numbers from <code>0</code> to <code>99</code>.</p>
-
-<ul>
-<li>Numbers must be separated by <code>,</code>, followed by a space</li>
-<li>Numbers should be printed in ascending order, with two digits</li>
-<li>The last number should be followed by a new line</li>
-<li>You can only use no more than 2 <code>print</code> functions with string format</li>
-<li>You can only use one loop in your code</li>
-<li>You are not allowed to store numbers or strings in a variable</li>
-<li>You are not allowed to import any module</li>
-</ul>| File: [5-print_comb2.py](./5-print_comb2.py)|
-|6| **Mandatory**  |  <p>Write a program that prints all possible different combinations of two digits.</p>
-
-<ul>
-<li>Numbers must be separated by <code>,</code>, followed by a space</li>
-<li>The two digits must be different</li>
-<li><code>01</code> and <code>10</code> are considered the same combination of the two digits <code>0</code> and <code>1</code></li>
-<li>Print only the smallest combination of two digits</li>
-<li>Numbers should be printed in ascending order, with two digits</li>
-<li>The last number should be followed by a new line</li>
-<li>You can only use no more than 3 <code>print</code> functions with string format</li>
-<li>You can only use no more than 2 loops in your code</li>
-<li>You are not allowed to store numbers or strings in a variable</li>
-<li>You are not allowed to import any module</li>
-</ul>| File: [6-print_comb3.py](./6-print_comb3.py)|
-|7| **Mandatory**  | <p>Write a function that checks for lowercase character. </p>
-
-<ul>
-<li>Prototype: <code>def islower(c):</code></li>
-<li>Returns <code>True</code> if <code>c</code> is lowercase</li>
-<li>Returns <code>False</code> otherwise</li>
-<li>You are not allowed to import any module</li>
-<li>You are not allowed to use <code>str.upper()</code> and <code>str.isupper()</code></li>
-<li><a href="https://docs.python.org/3.4/library/functions.html?highlight=ord#ord">Tips: ord()</a></li>
-</ul>
-
-<p>You don&#39;t need to understand <code>__import__</code></p> | File: [7-islower.py](./7-islower.py)|
-|8| **Mandatory**  |  <p>Write a function that print a string in uppercase followed by a new line.</p>
-
-<ul>
-<li>Prototype: <code>def uppercase(str):</code></li>
-<li>You can only use no more than 2 <code>print</code> functions with string format</li>
-<li>You can only use one loop in your code</li>
-<li>You are not allowed to import any module</li>
-<li>You are not allowed to use <code>str.upper()</code> and <code>str.isupper()</code></li>
-<li><a href="https://docs.python.org/3.4/library/functions.html?highlight=ord#ord">Tips: ord()</a></li>
-</ul>
-
-<p>You don&#39;t need to understand <code>__import__</code></p>| File: [8-uppercase.py](./8-uppercase.py)|
-|9| **Mandatory**  |
-
-  <p>Write a function that prints the last digit of a number.</p>
-  
-  <ul>
-  <li>Prototype: <code>def print_last_digit(number):</code></li>
-  <li>Returns the value of the last digit</li>
-  <li>You are not allowed to import any module</li>
-  </ul>
-  
-  <p>You don&#39;t need to understand <code>__import__</code></p>| File: [9-print_last_digit.py](./9-print_last_digit.py)|
+|2| **Mandatory**  | <p>Write a program that prints the alphabet, in lowercase, not followed by a new line.</p><ul><li>You can only use one <code>print</code> function with string format</li><li>You can only use one loop in your code</li><li>You are not allowed to store characters in a variable</li><li>You are not allowed to import any module</li></ul>| File: [2-print_alphabet.py](./2-print_alphabet.py)|
+|3| **Mandatory**  |  <p>Write a program that prints the alphabet, in lowercase, not followed by a new line.</p><ul><li>Print all the letters except <code>q</code> and <code>e</code></li><li>You can only use one <code>print</code> function with string format</li><li>You can only use one loop in your code</li><li>You are not allowed to store characters in a variable</li><li>You are not allowed to import any module</li></ul>| File: [3-print_alphabt.py](./3-print_alphabt.py)|
+|4| **Mandatory**  |  <p>Write a program that prints all numbers from <code>0</code> to <code>98</code> in decimal and in hexadecimal (as in the following example)</p><ul><li>You can only use one <code>print</code> function with string format</li><li>You can only use one loop in your code</li><li>You are not allowed to store numbers or strings in a variable</li><li>You are not allowed to import any module</li></ul>| File: [4-print_hexa.py](./4-print_hexa.py)|
+|5| **Mandatory**  |  <p>Write a program that prints numbers from <code>0</code> to <code>99</code>.</p><ul><li>Numbers must be separated by <code>,</code>, followed by a space</li><li>Numbers should be printed in ascending order, with two digits</li><li>The last number should be followed by a new line</li><li>You can only use no more than 2 <code>print</code> functions with string format</li><li>You can only use one loop in your code</li><li>You are not allowed to store numbers or strings in a variable</li><li>You are not allowed to import any module</li></ul>| File: [5-print_comb2.py](./5-print_comb2.py)|
+|6| **Mandatory**  |  <p>Write a program that prints all possible different combinations of two digits.</p><ul><li>Numbers must be separated by <code>,</code>, followed by a space</li><li>The two digits must be different</li><li><code>01</code> and <code>10</code> are considered the same combination of the two digits <code>0</code> and <code>1</code></li><li>Print only the smallest combination of two digits</li><li>Numbers should be printed in ascending order, with two digits</li><li>The last number should be followed by a new line</li><li>You can only use no more than 3 <code>print</code> functions with string format</li><li>You can only use no more than 2 loops in your code</li><li>You are not allowed to store numbers or strings in a variable</li><li>You are not allowed to import any module</li></ul>| File: [6-print_comb3.py](./6-print_comb3.py)|
+|7| **Mandatory**  | <p>Write a function that checks for lowercase character. </p><ul><li>Prototype: <code>def islower(c):</code></li><li>Returns <code>True</code> if <code>c</code> is lowercase</li><li>Returns <code>False</code> otherwise</li><li>You are not allowed to import any module</li><li>You are not allowed to use <code>str.upper()</code> and <code>str.isupper()</code></li><li><a href="https://docs.python.org/3.4/library/functions.html?highlight=ord#ord">Tips: ord()</a></li></ul><p>You don&#39;t need to understand <code>__import__</code></p> | File: [7-islower.py](./7-islower.py)|
+|8| **Mandatory**  |  <p>Write a function that print a string in uppercase followed by a new line.</p><ul><li>Prototype: <code>def uppercase(str):</code></li><li>You can only use no more than 2 <code>print</code> functions with string format</li><li>You can only use one loop in your code</li><li>You are not allowed to import any module</li><li>You are not allowed to use <code>str.upper()</code> and <code>str.isupper()</code></li><li><a href="https://docs.python.org/3.4/library/functions.html?highlight=ord#ord">Tips: ord()</a></li></ul><p>You don&#39;t need to understand <code>__import__</code></p>| File: [8-uppercase.py](./8-uppercase.py)|
+|9| **Mandatory**  |  <p>Write a function that prints the last digit of a number.</p>    <ul>  <li>Prototype: <code>def print_last_digit(number):</code></li>  <li>Returns the value of the last digit</li>  <li>You are not allowed to import any module</li>  </ul> <p>You don&#39;t need to understand <code>__import__</code></p>| File: [9-print_last_digit.py](./9-print_last_digit.py)|
 |10| **Mandatory**  |
 
 
