@@ -59,40 +59,9 @@ At the end of this project we are expected to be able to explain to anyone, with
 |7| **Mandatory**  | <p>Write a function that checks for lowercase character. </p><ul><li>Prototype: <code>def islower(c):</code></li><li>Returns <code>True</code> if <code>c</code> is lowercase</li><li>Returns <code>False</code> otherwise</li><li>You are not allowed to import any module</li><li>You are not allowed to use <code>str.upper()</code> and <code>str.isupper()</code></li><li><a href="https://docs.python.org/3.4/library/functions.html?highlight=ord#ord">Tips: ord()</a></li></ul><p>You don&#39;t need to understand <code>__import__</code></p> | File: [7-islower.py](./7-islower.py)|
 |8| **Mandatory**  |  <p>Write a function that print a string in uppercase followed by a new line.</p><ul><li>Prototype: <code>def uppercase(str):</code></li><li>You can only use no more than 2 <code>print</code> functions with string format</li><li>You can only use one loop in your code</li><li>You are not allowed to import any module</li><li>You are not allowed to use <code>str.upper()</code> and <code>str.isupper()</code></li><li><a href="https://docs.python.org/3.4/library/functions.html?highlight=ord#ord">Tips: ord()</a></li></ul><p>You don&#39;t need to understand <code>__import__</code></p>| File: [8-uppercase.py](./8-uppercase.py)|
 |9| **Mandatory**  |  <p>Write a function that prints the last digit of a number.</p>    <ul>  <li>Prototype: <code>def print_last_digit(number):</code></li>  <li>Returns the value of the last digit</li>  <li>You are not allowed to import any module</li>  </ul> <p>You don&#39;t need to understand <code>__import__</code></p>| File: [9-print_last_digit.py](./9-print_last_digit.py)|
-|10| **Mandatory**  |
-
-
-  <p>Write a function that adds two integers and returns the result.</p>
-  
-  <ul>
-  <li>Prototype: <code>def add(a, b):</code></li>
-  <li>Returns the value of <code>a + b</code></li>
-  <li>You are not allowed to import any module</li>
-  </ul>
-  
-  <p>You don&#39;t need to understand <code>__import__</code></p>
-  
-  | File: [10-add.py](./10-add.py)|
-|11| **Mandatory**  |<p>Write a function that computes <code>a</code> to the power of <code>b</code> and return the value.</p>
-
-<ul>
-<li>Prototype: <code>def pow(a, b):</code></li>
-<li>Returns the value of <code>a ^ b</code></li>
-<li>You are not allowed to import any module</li>
-</ul>
-
-<p>You don&#39;t need to understand <code>__import__</code></p>| File: [11-pow.py](./11-pow.py)|
-|12| **Mandatory**  |  <p>Write a function that prints the numbers from 1 to 100 separated by a space. </p>
-
-<ul>
-<li>For multiples of three print <code>Fizz</code> instead of the number and for multiples of five print <code>Buzz</code>. </li>
-<li>For numbers which are multiples of both three and five print <code>FizzBuzz</code>.</li>
-<li>Prototype: <code>def fizzbuzz():</code></li>
-<li>Each element should be followed by a space</li>
-<li>You are not allowed to import any module</li>
-</ul>
-
-<p>You don&#39;t need to understand <code>__import__</code></p>| File: [12-fizzbuzz.py](./12-fizzbuzz.py)|
+|10| **Mandatory**  |  <p>Write a function that adds two integers and returns the result.</p>    <ul>  <li>Prototype: <code>def add(a, b):</code></li>  <li>Returns the value of <code>a + b</code></li>  <li>You are not allowed to import any module</li>  </ul>    <p>You don&#39;t need to understand <code>__import__</code></p>    | File: [10-add.py](./10-add.py)|
+|11| **Mandatory**  |<p>Write a function that computes <code>a</code> to the power of <code>b</code> and return the value.</p><ul><li>Prototype: <code>def pow(a, b):</code></li><li>Returns the value of <code>a ^ b</code></li><li>You are not allowed to import any module</li></ul><p>You don&#39;t need to understand <code>__import__</code></p>| File: [11-pow.py](./11-pow.py)|
+|12| **Mandatory**  |  <p>Write a function that prints the numbers from 1 to 100 separated by a space. </p><ul><li>For multiples of three print <code>Fizz</code> instead of the number and for multiples of five print <code>Buzz</code>. </li><li>For numbers which are multiples of both three and five print <code>FizzBuzz</code>.</li><li>Prototype: <code>def fizzbuzz():</code></li><li>Each element should be followed by a space</li><li>You are not allowed to import any module</li></ul><p>You don&#39;t need to understand <code>__import__</code></p>| File: [12-fizzbuzz.py](./12-fizzbuzz.py)|
 13 | *Advanced* |<p>Write a program that prints the alphabet, in reverse order, alternating lowercase and uppercase (<code>z</code> in lowercase and <code>Y</code> in uppercase) , not followed by a new line.</p><ul><li>You can only use one <code>print</code> function with string format</li><li>You can only use one loop in your code</li><li>You are not allowed to store characters in a variable</li><li>You are not allowed to import any module</li></ul> | File: [100-print_tebahpla.py](./100-print_tebahpla.py) |
 14 | *Advanced* | <p>Write a function that creates a copy of the string, removing the character at the position <code>n</code> (not the Python way, the &quot;C array index&quot;).</p>    <ul>  <li>Prototype: <code>def remove_char_at(str, n):</code></li>  <li>You are not allowed to import any module</li>  </ul>    <p>You don&#39;t need to understand <code>__import__</code></p>  | File: [101-remove_char_at.py](./101-remove_char_at.py)
 15 | *Advanced* | <p>Write the Python function <code>def magic_calculation(a, b, c):</code> that does exactly the same as the following Python bytecode:</p><pre><code>  3           0 LOAD_FAST                0 (a)              3 LOAD_FAST                1 (b)			                6 COMPARE_OP               0 (&lt;)							              9 POP_JUMP_IF_FALSE       16										  										    4          12 LOAD_FAST                2 (c)											             15 RETURN_VALUE														 														   5     &gt;&gt;   16 LOAD_FAST                2 (c)														                19 LOAD_FAST                1 (b)																		             22 COMPARE_OP               4 (&gt;)																					              25 POP_JUMP_IF_FALSE       36																								  																								    6          28 LOAD_FAST                0 (a)																									             31 LOAD_FAST                1 (b)																												              34 BINARY_ADD																															               35 RETURN_VALUE																																		   																																		     7     &gt;&gt;   36 LOAD_FAST                0 (a)																																			              39 LOAD_FAST                1 (b)																																						               42 BINARY_MULTIPLY																																									                43 LOAD_FAST                2 (c)																																													             46 BINARY_SUBTRACT																																																              47 RETURN_VALUE																																																			  </code></pre>| File: [102-magic_calculation.py](./102-magic_calculation.py)
