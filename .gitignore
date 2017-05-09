@@ -13,7 +13,7 @@
 **/\#*
 
 # Ignore main files
-**/*main.c
+**/*main.*
 
 # Ignore object files and libraries
 *.o
