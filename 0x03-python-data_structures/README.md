@@ -43,145 +43,16 @@ At the end of this project we are expected to be able to explain to anyone, with
 ## Project Breakdown
 | Task # | Type | Short description | File name and link |
 | ---: | --- | --- | --- |
-|0| **Mandatory**  |<p>Write a function that prints all integers of a list.</p>     <ul><li>Prototype: <code>def print_list_integer(my_list=[]):</code></li><li>Format: one integer per line. See example</li><li>You are not allowed to import any module</li><li>You can assume that the list only contains integers</li><li>You are not allowed to cast integers into strings</li><li>You have to use <code>str.format()</code> to print integers</li></ul> | File: [0-print_list_integer.py](./-print_list_integer.py)
-|1| **Mandatory**  | | File: [1-element_at.py](./1-element_at.py)
-|2| **Mandatory**  | | File: [2-replace_in_list.py](./2-replace_in_list.py)
-|3| **Mandatory**  | | File: [3-print_reversed_list_integer.py](./3-print_reversed_list_integer.py)
-|4| **Mandatory**  | | File: [4-new_in_list.py](./4-new_in_list.py)
-|5| **Mandatory**  | | File: [5-no_c.py](./5-no_c.py)
-|6| **Mandatory**  | | File: [6-print_matrix_integer.py](./6-print_matrix_integer.py)
-|7| **Mandatory**  | | File: [7-add_tuple.py](./7-add_tuple.py)
-|8| **Mandatory**  | | File: [8-multiple_returns.py](./8-multiple_returns.py)
-|9| **Mandatory**  | | File: [9-max_intege r.py](./9-max_intege r.py)
-|10| **Mandatory**  | | File: [10-divisible_by_2.py](./10-divisible_by_2.py)
-|11| **Mandatory**  | | File: [11-delete_at.py](./11-delete_at.py)
-|12| **Mandatory**  | | File: [12-switch.py](./12-switch.py)
-
-
-     <p>Write a function that retrieves an element from a list.</p>
-     <ul>
-<li>Prototype: <code>def element_at(my_list, idx):</code></li>
-<li>If <code>idx</code> is out of range, the function should return <code>None</code> </li>
-<li>You are not allowed to import any module</li>
-<li>You are not allowed to use <code>try/except</code></li>
-     <ul>
-<li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-<li>Directory: <code>0x03-python-data_structures</code></li>
-<li>File: <code>1-element_at.py</code></li>
-     <p>Write a function that replaces an element of a list at a specific position.</p>
-     <ul>
-<li>Prototype: <code>def replace_in_list(my_list, idx, element):</code></li>
-<li>If <code>idx</code> is out of range, the function should not modify anything, and returns the original list</li>
-<li>You are not allowed to import any module</li>
-<li>You are not allowed to use <code>try/except</code></li>
-     <ul>
-<li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-<li>Directory: <code>0x03-python-data_structures</code></li>
-<li>File: <code>2-replace_in_list.py</code></li>
-     <p>Write a function that prints all integers of a list, in reverse order.</p>
-     <ul>
-<li>Prototype: <code>def print_reversed_list_integer(my_list=[]):</code></li>
-<li>Format: one integer per line. See example</li>
-<li>You are not allowed to import any module</li>
-<li>You can assume that the list only contains integers</li>
-<li>You are not allowed to cast integers into strings</li>
-<li>You have to use <code>str.format()</code> to print integers</li>
-     <ul>
-<li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-<li>Directory: <code>0x03-python-data_structures</code></li>
-<li>File: <code>3-print_reversed_list_integer.py</code></li>
-     <p>Write a function that replaces an element in a list at a specific position without modifying the original list.</p>
-     <ul>
-<li>Prototype: <code>def new_in_list(my_list, idx, element):</code></li>
-<li>If <code>idx</code> is out of range, the function should return a copy of the original <code>list</code></li>
-<li>You are not allowed to import any module</li>
-<li>You are not allowed to use <code>try/except</code></li>
-     <ul>
-<li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-<li>Directory: <code>0x03-python-data_structures</code></li>
-<li>File: <code>4-new_in_list.py</code></li>
-     <p>Write a function that removes all characters <code>c</code> and <code>C</code> from a string.</p>
-     <ul>
-<li>Prototype: <code>def no_c(my_string):</code></li>
-<li>The function shoud return the new string</li>
-<li>You are not allowed to import any module</li>
-<li>You are not allowed to use <code>str.replace()</code></li>
-     <ul>
-<li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-<li>Directory: <code>0x03-python-data_structures</code></li>
-<li>File: <code>5-no_c.py</code></li>
-     <p>Write a function that prints a matrix of integers.</p>
-     <ul>
-<li>Prototype: <code>def print_matrix_integer(matrix=[[]]):</code></li>
-<li>Format: see example</li>
-<li>You are not allowed to import any module</li>
-<li>You can assume that the list only contains integers</li>
-<li>You are not allowed to cast integers into strings</li>
-<li>You have to use <code>str.format()</code> to print integers</li>
-     <ul>
-<li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-<li>Directory: <code>0x03-python-data_structures</code></li>
-<li>File: <code>6-print_matrix_integer.py</code></li>
-     <p>Write a function that adds 2 tuples.</p>
-     <ul>
-<li>Prototype: <code>def add_tuple(tuple_a=(), tuple_b=()):</code></li>
-<li>Returns a tuple with 2 integers:
-  <ul>
-    <li>The first element should be the addition of the first element of each argument</li>
-    <li>The second element should be the addition of the second element of each argument</li>
-<li>You are not allowed to import any module</li>
-<li>You can assume that the two tuples will only contain integers</li>
-<li>If a tuple is smaller than 2, use the value <code>0</code> for each missing integer</li>
-<li>If a tuple is bigger than 2, use only the first 2 integers</li>
-     <ul>
-<li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-<li>Directory: <code>0x03-python-data_structures</code></li>
-<li>File: <code>7-add_tuple.py</code></li>
-     <p>Write a function that returns a tuple with the length of a string and its first character.</p>
-     <ul>
-<li>Prototype: <code>def multiple_returns(sentence):</code></li>
-<li>If the sentence is empty, the first character should be equal to <code>None</code></li>
-<li>You are not allowed to import any module</li>
-     <ul>
-<li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-<li>Directory: <code>0x03-python-data_structures</code></li>
-<li>File: <code>8-multiple_returns.py</code></li>
-     <p>Write a function that finds the biggest integer of a list. </p>
-     <ul>
-<li>Prototype: <code>def max_integer(my_list=[]):</code></li>
-<li>If the list is empty, return <code>None</code></li>
-<li>You can assume that the list only contains integers</li>
-<li>You are not allowed to import any module</li>
-<li>You are not allowed to use the builtin <code>max()</code></li>
-     <ul>
-<li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-<li>Directory: <code>0x03-python-data_structures</code></li>
-<li>File: <code>9-max_integer.py</code></li>
-     <p>Write a function that finds all multiples of 2 in a list.</p>
-     <ul>
-<li>Prototype: <code>def divisible_by_2(my_list=[]):</code></li>
-<li>Return a new list with <code>True</code> or <code>False</code>, depending on wether the integer at the same position in the original list is a multiple of 2</li>
-<li>The new list should have the same size as the original list</li>
-<li>You are not allowed to import any module</li>
-     <ul>
-<li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-<li>Directory: <code>0x03-python-data_structures</code></li>
-<li>File: <code>10-divisible_by_2.py</code></li>
-     <p>Write a function that deletes the item at a specific position in a list.</p>
-     <ul>
-<li>Prototype: <code>def delete_at(my_list=[], idx=0):</code></li>
-<li>You are not allowed to use <code>pop()</code></li>
-<li>You are not allowed to import any module</li>
-     <ul>
-<li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-<li>Directory: <code>0x03-python-data_structures</code></li>
-<li>File: <code>11-delete_at.py</code></li>
-     <p>Complete the source code in order to switch value of <code>a</code> and <code>b</code></p>
-     <ul>
-<li>You can find the source code <a href="https://github.com/holbertonschool/0x03.py/blob/master/12-switch_py">here</a></li>
-<li>Your code should be inserted where the comment is (line 4)</li>
-<li>Your program should be exactly 5 lines long</li>
-     <ul>
-<li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-<li>Directory: <code>0x03-python-data_structures</code></li>
-<li>File: <code>12-switch.py</code></li>
+|0| **Mandatory**  |<p>Write a function that prints all integers of a list.</p>     <ul><li>Prototype: <code>def print_list_integer(my_list=[]):</code></li><li>Format: one integer per line. See example</li><li>You are not allowed to import any module</li><li>You can assume that the list only contains integers</li><li>You are not allowed to cast integers into strings</li><li>You have to use <code>str.format()</code> to print integers</li></ul> | File: [0-print_list_integer.py](./print_list_integer.py)
+|1| **Mandatory**  |<p>Write a function that retrieves an element from a list.</p>     <ul><li>Prototype: <code>def element_at(my_list, idx):</code></li><li>If <code>idx</code> is out of range, the function should return <code>None</code> </li><li>You are not allowed to import any module</li><li>You are not allowed to use <code>try/except</code></li></ul> | File: [1-element_at.py](./1-element_at.py)
+|2| **Mandatory**  |<p>Write a function that replaces an element of a list at a specific position.</p><ul><li>Prototype: <code>def replace_in_list(my_list, idx, element):</code></li><li>If <code>idx</code> is out of range, the function should not modify anything, and returns the original list</li><li>You are not allowed to import any module</li><li>You are not allowed to use <code>try/except</code></li></ul> | File: [2-replace_in_list.py](./2-replace_in_list.py)
+|3| **Mandatory**  |<p>Write a function that prints all integers of a list, in reverse order.</p><ul><li>Prototype: <code>def print_reversed_list_integer(my_list=[]):</code></li><li>Format: one integer per line. See example</li><li>You are not allowed to import any module</li><li>You can assume that the list only contains integers</li><li>You are not allowed to cast integers into strings</li><li>You have to use <code>str.format()</code> to print integers</li></ul> | File: [3-print_reversed_list_integer.py](./3-print_reversed_list_integer.py)
+|4| **Mandatory**  |<p>Write a function that replaces an element in a list at a specific position without modifying the original list.</p><ul><li>Prototype: <code>def new_in_list(my_list, idx, element):</code></li><li>If <code>idx</code> is out of range, the function should return a copy of the original <code>list</code></li><li>You are not allowed to import any module</li><li>You are not allowed to use <code>try/except</code></li></ul> | File: [4-new_in_list.py](./4-new_in_list.py)
+|5| **Mandatory**  |<p>Write a function that removes all characters <code>c</code> and <code>C</code> from a string.</p><ul><li>Prototype: <code>def no_c(my_string):</code></li><li>The function shoud return the new string</li><li>You are not allowed to import any module</li><li>You are not allowed to use <code>str.replace()</code></li></ul> | File: [5-no_c.py](./5-no_c.py)
+|6| **Mandatory**  |<p>Write a function that prints a matrix of integers.</p><ul><li>Prototype: <code>def print_matrix_integer(matrix=[[]]):</code></li><li>Format: see example</li><li>You are not allowed to import any module</li><li>You can assume that the list only contains integers</li><li>You are not allowed to cast integers into strings</li><li>You have to use <code>str.format()</code> to print integers</li></ul> | File: [6-print_matrix_integer.py](./6-print_matrix_integer.py)
+|7| **Mandatory**  |<p>Write a function that adds 2 tuples.</p><ul><li>Prototype: <code>def add_tuple(tuple_a=(), tuple_b=()):</code></li><li>Returns a tuple with 2 integers:  <ul>    <li>The first element should be the addition of the first element of each argument</li>    <li>The second element should be the addition of the second element of each argument</li><li>You are not allowed to import any module</li><li>You can assume that the two tuples will only contain integers</li><li>If a tuple is smaller than 2, use the value <code>0</code> for each missing integer</li><li>If a tuple is bigger than 2, use only the first 2 integers</li></ul> | File: [7-add_tuple.py](./7-add_tuple.py)
+|8| **Mandatory**  |<p>Write a function that returns a tuple with the length of a string and its first character.</p><ul><li>Prototype: <code>def multiple_returns(sentence):</code></li><li>If the sentence is empty, the first character should be equal to <code>None</code></li><li>You are not allowed to import any module</li></ul> | File: [8-multiple_returns.py](./8-multiple_returns.py)
+|9| **Mandatory**  |<p>Write a function that finds the biggest integer of a list. </p><ul><li>Prototype: <code>def max_integer(my_list=[]):</code></li><li>If the list is empty, return <code>None</code></li><li>You can assume that the list only contains integers</li><li>You are not allowed to import any module</li><li>You are not allowed to use the builtin <code>max()</code></li></ul> | File: [9-max_intege r.py](./9-max_intege r.py)
+|10| **Mandatory**  |<p>Write a function that finds all multiples of 2 in a list.</p><ul><li>Prototype: <code>def divisible_by_2(my_list=[]):</code></li><li>Return a new list with <code>True</code> or <code>False</code>, depending on wether the integer at the same position in the original list is a multiple of 2</li><li>The new list should have the same size as the original list</li><li>You are not allowed to import any module</li></ul> | File: [10-divisible_by_2.py](./10-divisible_by_2.py)
+|11| **Mandatory**  |<p>Write a function that deletes the item at a specific position in a list.</p><ul><li>Prototype: <code>def delete_at(my_list=[], idx=0):</code></li><li>You are not allowed to use <code>pop()</code></li><li>You are not allowed to import any module</li></ul> | File: [11-delete_at.py](./11-delete_at.py)
+|12| **Mandatory**  |<p>Complete the source code in order to switch value of <code>a</code> and <code>b</code></p><ul><li>You can find the source code <a href="https://github.com/holbertonschool/0x03.py/blob/master/12-switch_py">here</a></li><li>Your code should be inserted where the comment is (line 4)</li><li>Your program should be exactly 5 lines long</li></ul> | File: [12-switch.py](./12-switch.py)
