@@ -3,5 +3,5 @@ def replace_in_list(my_list, idx, element):
     if idx < 0:
         return(my_list)
     my_list[idx] = element
-    print(my_list)
-
+    for i in my_list:
+        print(my_list)
