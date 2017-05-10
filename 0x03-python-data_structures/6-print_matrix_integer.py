@@ -11,7 +11,7 @@ def print_matrix_integer(matrix=[[]]):
             print("{:d}".format(idx), end="")
             row_size = len(matrix[row]) - 1
             row_index = matrix[row].index(idx)
-            if row_index != row_size:
-                print(' ', end="")
+            if row_index != row_size:  # check that row index not equal to size of row
+                print(' ', end="")  # print spaces between numbers
             else:
-                print()
+                print()  # insert new line once index equals size of row
