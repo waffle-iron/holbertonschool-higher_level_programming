@@ -12,6 +12,6 @@ def print_matrix_integer(matrix=[[]]):
             row_size = len(matrix[row]) - 1
             row_index = matrix[row].index(idx)
             if row_index != row_size:
-                print(' ')
+                print(' ', end="")
             else:
                 print()
