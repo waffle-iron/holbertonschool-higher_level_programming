@@ -4,6 +4,7 @@ def print_matrix_integer(matrix=[[]]):
         return None
 
     if len(matrix[0]) == 0:  # check length of matrix
+        print()
         return
 
     for row in range(0, len(matrix[:])):  # iterate through matrix and print ints
@@ -15,4 +16,3 @@ def print_matrix_integer(matrix=[[]]):
                 print(' ', end="")  # print spaces between numbers
             else:
                 print()  # insert new line once index equals size of row
-        print()
