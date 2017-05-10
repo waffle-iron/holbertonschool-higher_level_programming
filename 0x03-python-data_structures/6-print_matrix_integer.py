@@ -9,3 +9,9 @@ def print_matrix_integer(matrix=[[]]):
     for row in range(0, len(matrix[:])):  # iterate through matrix and print ints
         for idx in matrix[row]:
             print("{:d}".format(idx), end="")
+            row_size = len(matrix[row]) - 1
+            row_index = matrix[row].index(idx)
+            if row_index != row_size:
+                print(' ')
+            else:
+                print()
