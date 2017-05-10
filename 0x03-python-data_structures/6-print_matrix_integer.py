@@ -8,4 +8,4 @@ def print_matrix_integer(matrix=[[]]):
 
     for row in range(0, len(matrix[:])):  # iterate through matrix and print ints
         for idx in matrix[row]:
-            print("{:d}".format(idx))
+            print("{:d}".format(idx), end="")
