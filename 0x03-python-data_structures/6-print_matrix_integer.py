@@ -7,12 +7,12 @@ def print_matrix_integer(matrix=[[]]):
         print()
         return
 
-    for row in range(0, len(matrix[:])):  # iterate through matrix and print ints
+    for row in range(0, len(matrix[:])):  # iterate through matrix, print ints
         for idx in matrix[row]:
             print("{:d}".format(idx), end="")
             row_size = len(matrix[row]) - 1
             row_index = matrix[row].index(idx)
-            if row_index != row_size:  # check that row index not equal to size of row
+            if row_index != row_size:  # check size of row_index
                 print(' ', end="")  # print spaces between numbers
             else:
                 print()  # insert new line once index equals size of row
