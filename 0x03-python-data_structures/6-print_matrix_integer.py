@@ -1,3 +1,11 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    
+    if matrix is None:  # check if matrix exists
+        return None
+
+    if len(matrix[0]) == 0:  # check length of matrix
+        return
+
+    for row in matrix[:]:  # iterate through matrix and print ints
+        for idx in matrix[row]:
+            print("{:d}".format(idx))
