@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
+    # store tuple length into new variables
     len_tuple_a = len(tuple_a)
     len_tuple_b = len(tuple_b)
 
+    # if tuple is bigger than 2, use only first 2 ints
     if len_tuple_a > 2:
         len_tuple_a = 2
     if len_tuple_b > 2:
@@ -12,7 +14,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
     list_a = [0, 0]
     list_b = [0, 0]
 
-    # loop through tuple, insert ints into list
+    # loop through tuple lengths, insert ints into list
     for i in range(len_tuple_a):
         list_a[i] += tuple_a[i]
     for i in range(len_tuple_b):
