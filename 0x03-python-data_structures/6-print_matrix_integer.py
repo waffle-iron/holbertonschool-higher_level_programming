@@ -15,3 +15,4 @@ def print_matrix_integer(matrix=[[]]):
                 print(' ', end="")  # print spaces between numbers
             else:
                 print()  # insert new line once index equals size of row
+        print()
