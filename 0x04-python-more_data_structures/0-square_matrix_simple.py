@@ -5,7 +5,7 @@ def square_matrix_simple(matrix=[]):
     if matrix == []:  # return if matrix is empty
         return
     squareit = lambda x : x*x
-    matrix_squared = [[squareit(matrix[x]) in row] for row in matrix]
+    matrix_squared = [[x*x for x in row] for row in matrix]
     return (matrix_squared)
 
 
