@@ -23,6 +23,9 @@
 **/_putchar.c
 **/a.out
 
+# ignore html
+**/*.html
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
