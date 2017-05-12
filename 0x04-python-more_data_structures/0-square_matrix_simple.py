@@ -4,8 +4,5 @@ def square_matrix_simple(matrix=[]):
         return None
     if matrix == []:  # return if matrix is empty
         return
-    squareit = lambda x : x*x
     matrix_squared = [[x*x for x in row] for row in matrix]
     return (matrix_squared)
-
-
