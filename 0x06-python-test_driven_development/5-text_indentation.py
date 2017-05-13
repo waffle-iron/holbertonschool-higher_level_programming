@@ -17,6 +17,10 @@ def text_indentation(text):
     if len(text) < 0 or text is None or not isinstance(text, str):
         raise TypeError('text must be a string')
     # replace chars with placeholder
-    text = text.replace('.',r'\\')
+    text = text.replace('.','.\\')
+    print(text)
+    text = text.replace('?','?\\')
+    print(text)
+    text = text.replace(':',':\\')
     print(text)
     print('\n'.join([t.strip() for t in text.split('\\')]), end="")
