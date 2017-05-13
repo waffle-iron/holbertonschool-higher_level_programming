@@ -1,4 +1,39 @@
 #!/usr/bin/python3
+"""
+This module is task 1 for 0x06-python-test_driven_development
+
+This module supplies one function: matrix_divided
+
+To test, a text file is provided in the /tests directory. To run:
+`python3 -m doctest -v ./tests/0-matrix_divided.txt`
+"""
 def matrix_divided(matrix, div):
-    
-    
+    """
+    This function divides all elements of a matrix
+
+    Arguments:
+    matrix: must be a list of lists of integers or floats
+    div: must be a number (integer or float)
+
+    Return:
+    matrix / div or raise error if following encountered:
+    - raise a TypeError exception with the message matrix must be a matrix (list of lists) of integers/floats
+    - raise a TypeError exception with the message Each row of the matrix must have the same size
+    - raise a TypeError exception with the message div must be a number
+    - raise a ZeroDivisionError exception with the message division by zero
+    """
+    matrix_quotient = []
+    for x in range(len(matrix)):
+        item = 0
+        try:
+            item = matrix[x] / div
+        except:
+            if not isinstance(matrix, (int, float)):
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            if not isinstance(div, (int, float)):
+                raise TypeError("div must be a number")
+            if div == 0:
+                raise ZeroDivisionError("division by zero")
+        finally:
+            matrix_quotient.append(item)
+        return (matrix_quotient)
