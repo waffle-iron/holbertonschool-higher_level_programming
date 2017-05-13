@@ -12,8 +12,8 @@ def safe_print_list(my_list=[], x=0):
     # You are not allowed to use len()
 
     count = 0
-    if count < x:
-        for item in my_list:
+    for item in my_list:
+        if count < x:
             try:
                 print("{}".format(item), end="")
                 count += 1
