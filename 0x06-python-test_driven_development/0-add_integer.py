@@ -7,6 +7,7 @@ def add_integer(a, b):
     >>> add_integer(2, 3)
     5
     """
-    if isinstance(a, int) and isinstance(b, int):
+    int(a, b)
+    if a is not string:
         return a + b
     return a + b
