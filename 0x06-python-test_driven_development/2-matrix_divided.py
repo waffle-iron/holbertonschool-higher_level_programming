@@ -37,7 +37,7 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError(zero_error)
     matrix_quotient = []
-    for row in range(len(matrix)):
+    for row in matrix:
         item = 0
         if len(row) != len(matrix[0]):
             raise TypeError(type_error_size)
