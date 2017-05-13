@@ -36,9 +36,12 @@ def matrix_divided(matrix, div):
         raise TypeError(type_error_div)
     if div == 0:
         raise ZeroDivisionError(zero_error)
-matrix_quotient = []
-    for x in range(len(matrix)):
+    matrix_quotient = []
+    for row in range(len(matrix)):
         item = 0
+        if len(row) != len(matrix[0]):
+            raise TypeError(type_error_size)
         item = matrix[x] / div
                 matrix_quotient.append(item)
         return (matrix_quotient)
+
