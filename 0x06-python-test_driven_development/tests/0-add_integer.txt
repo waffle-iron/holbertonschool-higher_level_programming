@@ -9,48 +9,72 @@ This is a doctest file to test the above module
 
 Import ``add_integer`` from the ``0-add_integer`` module:
 
->>> add_integer = __import__('0-add_integer').add_integer
+  >>> add_integer = __import__('0-add_integer').add_integer
 
 Now use it:
 
->>> add_integer(1, 2)
-3
+  >>> add_integer(1, 2)
+  3
 
 
 This function works with integers
 
->>> add_integer(24, 42)
-66
->>> add_integer(-24, 42)
-18
->>> add_integer(-24, -42)
--66
+  >>> add_integer(24, 42)
+  66
+  >>> add_integer(-24, 42)
+  18
+  >>> add_integer(-24, -42)
+  -66
 
 This function works with floats    
 
->>> add_integer(2.4, 4.2)
-6
->>> add_integer(-24, 4.2)
--20
-    
+  >>> add_integer(2.4, 4.2)
+  6
+  >>> add_integer(-24, 4.2)
+  -20
+
 In the event that arguments are floats, they are cast as integers before addition operation
 
->>> add_integer(2.456, 4.21)
-6
->>> add_integer(-24.68, 4.242)
--20
+  >>> add_integer(2.456, 4.21)
+  6
+  >>> add_integer(-24.68, 4.242)
+  -20
 
 This function requires 2 arguments
 
 No more than 2 arguments
 
->>> add_integer(2, 4, 6)
-Traceback (most recent call last):
-TypeError: add_integer() takes 2 positional arguments but 3 were given
+  >>> add_integer(2, 4, 6)
+  Traceback (most recent call last):
+  TypeError: add_integer() takes 2 positional arguments but 3 were given
 
 No less than 2 arguments
 
->>> add_integer(1)
-Traceback (most recent call last):
-TypeError: add_integer() missing 1 required positional argument: 'b'
+  >>> add_integer(1)
+  Traceback (most recent call last):
+  TypeError: add_integer() missing 1 required positional argument: 'b'
+  
+Testing exceptions - all the following are expected to fail
+  >>> def test_exceptions(func, tests):
+  ...     for test in tests:
+  ...         try:
+  ...             func(test[0], test[1])
+  ...         except Exception as e:
+  ...             pass
+  ...		    print("Failed with {} for input {} and {}".format(type(e).__name__, type(test[0]), type(test[1])))
+  ...         else:
+  ...             print("Did not fail for input {} and {}".format(test[0], test[1]))
+  >>> tests = [(1, "a"), (2.3, "a string"), (1, [1, 2]), (1.2, [1, 2]), (1, set("abracadabra")), (1.5, set("abracadabra")), (5, {"a":1, "b":4.5}), (3, test_exceptions), (4, range(5)), (3.45, b'byte literal'), (3.5, None)] 
+  >>> test_exceptions(add_integer, tests)
+  Failed with TypeError for input <class 'int'> and <class 'str'>
+  Failed with TypeError for input <class 'float'> and <class 'str'>
+  Failed with TypeError for input <class 'int'> and <class 'list'>
+  Failed with TypeError for input <class 'float'> and <class 'list'>
+  Failed with TypeError for input <class 'int'> and <class 'set'>
+  Failed with TypeError for input <class 'float'> and <class 'set'>
+  Failed with TypeError for input <class 'int'> and <class 'dict'>
+  Failed with TypeError for input <class 'int'> and <class 'function'>
+  Failed with TypeError for input <class 'int'> and <class 'range'>
+  Failed with TypeError for input <class 'float'> and <class 'bytes'>
+  Failed with TypeError for input <class 'float'> and <class 'NoneType'>
 
