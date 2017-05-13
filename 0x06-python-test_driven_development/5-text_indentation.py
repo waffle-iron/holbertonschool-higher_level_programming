@@ -18,9 +18,12 @@ def text_indentation(text):
         raise TypeError('text must be a string')
     # replace chars with placeholder
     text = text.replace('.','.\\')
-    print(text)
+    # print(text)
     text = text.replace('?','?\\')
-    print(text)
+    # print(text)
     text = text.replace(':',':\\')
-    print(text)
-    print('\n'.join([t.strip() for t in text.split('\\')]), end="")
+    # print(text)
+    # split string by placeholder
+    # strip leading/trailing characters
+    # join strings with two newlines
+    print('\n\n'.join([t.strip() for t in text.split('\\')]), end="")
