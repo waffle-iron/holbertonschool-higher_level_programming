@@ -42,7 +42,7 @@ def matrix_divided(matrix, div):
         if len(row) != len(matrix[0]):
             raise TypeError(type_error_size)
         for item in row:
-            if instance(item, (int, float)):
+            if isinstance(item, (int, float)):
                 item = int(item)
             else:
                 raise TypeError(type_error_type)
