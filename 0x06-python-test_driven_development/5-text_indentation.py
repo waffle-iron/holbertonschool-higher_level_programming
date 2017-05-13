@@ -9,10 +9,14 @@ To test, a text file is provided in the /tests directory. To run:
 """
 def text_indentation(text):
     """
-    Returns text from argument with 2 new lines after specific characters
+    prints to stdout text from argument with 2 new lines after specific characters
 
     Arguments:
     text: must be a string
     """
     if len(text) < 0 or text is None or not isinstance(text, str):
         raise TypeError('text must be a string')
+    # replace chars with \n
+    text = text.replace('.','\n')
+    newstring = ('\n'.join(text.split('\n'), end="")
+    print("{:s}".format(newstring))
