@@ -12,9 +12,9 @@ def safe_print_list(my_list=[], x=0):
     # You are not allowed to use len()
 
     count = 0
-    for count in range(my_list[:]):
+    for i, count in enumerate(my_list):
         try:
-            print("{:s}".format(my_list[count]))
+            print("{}".format(my_list[count]))
         except (IndexError, TypeError):
             print("{}".format("no can do!"))
     return(count)
