@@ -7,7 +7,9 @@ def add_integer(a, b):
     >>> add_integer(2, 3)
     5
     """
+    if not isinstance(a, (int, float)):
+        raise TypeError("a must be an integer")
+    if not isinstance(b, (int, float)):
+        raise TypeError("b must be an integer")
     int(a, b)
-    if a is not string:
-        return a + b
     return a + b
