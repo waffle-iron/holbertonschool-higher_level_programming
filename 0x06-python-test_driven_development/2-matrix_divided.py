@@ -5,7 +5,7 @@ This module is task 1 for 0x06-python-test_driven_development
 This module supplies one function: matrix_divided
 
 To test, a text file is provided in the /tests directory. To run:
-`python3 -m doctest -v ./tests/0-matrix_divided.txt`
+`python3 -m doctest -v ./tests/2-matrix_divided.txt`
 """
 def matrix_divided(matrix, div):
     """
@@ -48,6 +48,4 @@ def matrix_divided(matrix, div):
                 raise TypeError(type_error_type)
     matrix_quotient = [[round(item / div, 2) for item in row] for row in matrix]
     return(matrix_quotient)
-#            matrix_quotient.append(item)
- #       matrix_quotient.append(row)
-  #      matrix_quotient.append(row)
+
