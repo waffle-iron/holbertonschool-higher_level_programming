@@ -17,4 +17,5 @@ def safe_print_list(my_list=[], x=0):
             print("{}".format(my_list[i]),end="")
         except (IndexError, TypeError):
             print("{}".format("no can do!"))
+    print("")
     return(count)
