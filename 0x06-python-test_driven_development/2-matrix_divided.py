@@ -41,6 +41,11 @@ def matrix_divided(matrix, div):
         item = 0
         if len(row) != len(matrix[0]):
             raise TypeError(type_error_size)
+        for item in row:
+            if instance(item, (int, float)):
+                item = int(item)
+            else:
+                raise TypeError(type_error_type)
         item = matrix[x] / div
                 matrix_quotient.append(item)
         return (matrix_quotient)
