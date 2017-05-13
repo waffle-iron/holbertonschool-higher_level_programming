@@ -46,7 +46,6 @@ def matrix_divided(matrix, div):
                 item = int(item)
             else:
                 raise TypeError(type_error_type)
-        item = matrix[x] / div
-                matrix_quotient.append(item)
+            item = round(item / div, 2)
+        matrix_quotient.append(item)
         return (matrix_quotient)
-
