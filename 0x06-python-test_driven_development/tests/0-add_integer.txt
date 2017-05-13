@@ -1,0 +1,46 @@
+==============================
+ Module for ``0-add_integer``
+==============================
+This is a doctest file to test the above module
+
+====================
+ Usage instructions
+====================
+
+Import ``add_integer`` from the ``0-add_integer`` module:
+
+    >>> add_integer = __import__('0-add_integer`).add_integer
+
+Now use it:
+
+    >>> add_integer(1, 2)
+    3
+
+
+This function works with integers
+    >>> add_integer[(24, 42), (-24, 42), (-24, -42)]
+    66
+    18
+    -66
+
+This function works with floats    
+    >>> add_integer[(2.4, 4.2), (-24, 4.2)]
+    6
+    -20
+    
+In the event that arguments are floats, they are cast as integers before addition operation
+    >>> add_integer[(2.456, 4.21), (-24.68, 4.242)]
+    6
+    -20
+
+This function requires 2 arguments
+No more than 2 arguments
+    >>> add_integer(2, 4, 6)
+    Traceback (most recent call last):
+    TypeError: add_integer() takes 2 positional arguments but 3 were given
+
+No less than 2 arguments
+    >>> add_integer(1)
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'b'
+
