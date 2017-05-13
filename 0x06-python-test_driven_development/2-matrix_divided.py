@@ -26,18 +26,19 @@ def matrix_divided(matrix, div):
     type_error_size = "Each row of the matrix must have the same size"
     type_error_div = "div must be a number" 
     zero_error = "division by zero"
-    matrix_quotient = []
+    if matrix == [] or not isinstance(matrix, list):
+        raise TypeError(type_error_type)
+    if not all(isinstance(item, list) for item in matrix):
+        raise TypeEror(type_error_type)
+    if len(matrix[0]) == 0:
+        raise TypeError(type_error_type)
+    if not isinstance(div, (int, float)):
+        raise TypeError(type_error_div)
+    if div == 0:
+        raise ZeroDivisionError(zero_error)
+matrix_quotient = []
     for x in range(len(matrix)):
         item = 0
-        try:
-            item = matrix[x] / div
-        except:
-            if not isinstance(matrix, (int, float)):
-                raise TypeError(type_error_type)
-            if not isinstance(div, (int, float)):
-                raise TypeError(type_error_div)
-            if div == 0:
-                raise ZeroDivisionError(zero_error)
-        finally:
-            matrix_quotient.append(item)
+        item = matrix[x] / div
+                matrix_quotient.append(item)
         return (matrix_quotient)
