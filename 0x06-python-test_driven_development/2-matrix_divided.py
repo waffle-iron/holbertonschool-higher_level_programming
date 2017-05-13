@@ -22,6 +22,10 @@ def matrix_divided(matrix, div):
     - raise a TypeError exception with the message div must be a number
     - raise a ZeroDivisionError exception with the message division by zero
     """
+    type_error_type = "matrix must be a matrix (list of lists) of integers/floats"
+    type_error_size = "Each row of the matrix must have the same size"
+    type_error_div = "div must be a number" 
+    zero_error = "division by zero"
     matrix_quotient = []
     for x in range(len(matrix)):
         item = 0
@@ -29,11 +33,11 @@ def matrix_divided(matrix, div):
             item = matrix[x] / div
         except:
             if not isinstance(matrix, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError(type_error_type)
             if not isinstance(div, (int, float)):
-                raise TypeError("div must be a number")
+                raise TypeError(type_error_div)
             if div == 0:
-                raise ZeroDivisionError("division by zero")
+                raise ZeroDivisionError(zero_error)
         finally:
             matrix_quotient.append(item)
         return (matrix_quotient)
