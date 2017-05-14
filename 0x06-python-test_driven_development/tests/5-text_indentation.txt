@@ -19,7 +19,7 @@ Now use it:
   this follows a colon
 
 A super long string
->>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres.")  #doctest: +REPORT_NDIFF
+  >>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres.")  #doctest: +REPORT_NDIFF
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   <BLANKLINE>
   Quonam modo?
@@ -60,7 +60,7 @@ Multiple spaces at end and beginning of newline:
   Lisa
 
 Strings with space at the beginning:
-  >>> text_indentation("     <- spaces anyone?")  #doctest: +REPORT_NDIFF
+  >>> text_indentation("     <- spaces anyone?")  #doctest: +REPORT_NDIFF, +NORMALIZE_WHITESPACE
   <- spaces anyone?
 
 All ellipses dots:
@@ -81,7 +81,7 @@ All ellipses dots:
   <BLANKLINE>
 
 Newlines without substitutions
-  >>> text_indentation("hi  \n  how  \n  <- spaces anyone?->  \n  you:  Bobby?")  #doctest: +REPORT_NDIFF
+  >>> text_indentation("hi  \n  how  \n  <- spaces anyone?->  \n  you:  Bobby?")  #doctest: +REPORT_NDIFF, +NORMALIZE_WHITESPACE
   hi
     how
     <- spaces anyone?
@@ -96,7 +96,7 @@ An integer will return an error
   >>> text_indentation(45)  #doctest: +REPORT_NDIFF
   Traceback (most recent call last):
   ...
-  TypeError: object of type 'int' has no len()
+  TypeError: text must be a string
 
 No punctuation marks
   >>> text_indentation("there is no punctuation here")
@@ -108,25 +108,24 @@ No arguments passed will result in an error
   ...
   TypeError: text_indentation() missing 1 required positional argument: 'text'
 
-Too many arguments will result in an error
+Too many arguments will result in an error:
   >>> text_indentation("this", "that")
-  >>> text_indentation(this", "that")
-    File "<stdin>", line 1
-        text_indentation(this", "that")
-	                            ^
-  SyntaxError: invalid syntax
-
-Input of None will error
+  Traceback (most recent call last):
+  ...
+  TypeError: text_indentation() takes 1 positional argument but 2 were given
+  
+===========================
+ Input of None will error:
+===========================
   >>> text_indentation(None)
   Traceback (most recent call last):
   ...
-    TypeError: object of type 'NoneType' has no len()
+  TypeError: text must be a string
     
-Input of bool
+================
+ Input of bool:
+================
   >>> text_indentation(True)
   Traceback (most recent call last):
   ...
-  TypeError: object of type 'bool' has no len()
-
-Block of text
-  >>> text_indentation("Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, "and what is the use of a book," thought Alice "without pictures or conversation?" \n So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink eyes ran close by her.")
+  TypeError: text must be a string
