@@ -1,0 +1,86 @@
+=================================
+ Module for ``2-matrix_divided``
+=================================
+This is a doctest file to test the above module
+
+====================
+ Usage instructions
+====================
+
+Import ``matrix_divided`` from the ``2-matrix_divided`` module:
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Import matrix
+>>> matrix = [[1, 2, 3],[4, 5, 6]]
+>>> 
+Input of standard matrix and div = integer
+>>> print(matrix_divided(matrix, 3))
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Input of standard matrix and div = float
+>>> print(matrix_divided(matrix, 1.5))
+[[0.67, 1.33, 2.0], [2.67, 3.33, 4.0]]
+
+Print matrix
+>>> print(matrix)
+[[1, 2, 3], [4, 5, 6]]
+
+Input of div = 'string'
+>>> print(matrix_divided(matrix,"Hi"))
+Traceback (most recent call last):
+....
+TypeError: div must be a number
+
+Input of div = 0
+>>> print(matrix_divided(matrix, 0))
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+Change matrix to not be symmetrical
+>>> matrix = [[1, 2, 3],[4, 6]]
+
+Test above asymmetrical matrix
+>>> print(matrix_divided(matrix,2))
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+Change matrix to be symmetrical, but has a string
+>>> matrix = [[1, 'hi', 2], [5, 7, 8]]
+
+Input of new matrix that includes strings
+>>> print(matrix_divided(matrix,6))
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Set matrix as None
+>>> print(matrix_divided(None, 2))
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Matrix includes True and False
+>>> matrix = [[True, False], [1, 0]]
+>>> print(matrix_divided(matrix,2))
+[[0.5, 0.0], [0.5, 0.0]]
+
+No arguments passed
+>>> print(matrix_divided())
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Pass extra arguments
+>>> print(matrix_divided(matrix, 2, "well hello there"))
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() takes 2 positional arguments but 3 were given
+
+Pass true instead of matrix
+>>> print(matrix_divided(True, 2))
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
