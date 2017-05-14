@@ -1,0 +1,94 @@
+==================================
+ Module for ``4-print_square.py``
+==================================
+This is a doctest file to test the above module
+
+====================
+ Usage instructions
+====================
+
+Import ``print_square`` from the ``4-print_square`` module:
+
+>>> print_square = __import__('4-print_square').print_square
+
+Now use it:
+
+size of 3
+>>> print_square(3)
+###
+###
+###
+
+size of 4
+>>> print_square(4)
+####
+####
+####
+####
+
+size of 0
+>>> print_square(0)
+<BLANKLINE>
+
+size of True
+>>> print_square(True)
+#
+
+size of False
+>>> print_square(False)
+<BLANKLINE>
+
+Negative size
+>>> print_square(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+size of 10
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+size of negative float -4.3
+>>> print_square(-4.3)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+size of positive float 4.3
+>>> print_square(4.3)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+size of None
+>>> print_square(None)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+no arguments passed
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+more arguments passed
+>>> print_square(4, "hello there")
+Traceback (most recent call last):
+...
+TypeError: print_square() takes 1 positional argument but 2 were given
+
+string argument passed
+>>> print_square('string')
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
