@@ -44,7 +44,7 @@ def matrix_divided(matrix, div):
             if isinstance(item, (int, float)):
                 item = int(item)
             else:
-                raise TypeError(type_error_type)
+                raise TypeError(error_type)
     matrix_quotient = [[round(item / div, 2)
                         for item in row] for row in matrix]
     return(matrix_quotient)
