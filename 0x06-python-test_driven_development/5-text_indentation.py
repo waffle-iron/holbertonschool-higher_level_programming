@@ -17,7 +17,7 @@ def text_indentation(text):
     Arguments:
     text: must be a string
     """
-    if len(text) < 0 or text is None or not isinstance(text, str):
+    if not isinstance(text, str) or text is None or len(text) < 0:
         raise TypeError('text must be a string')
     # replace chars with placeholder
     text = text.replace('.', '.\\')
@@ -30,3 +30,4 @@ def text_indentation(text):
     # strip leading/trailing characters
     # join strings with two newlines
     print('\n\n'.join([t.strip() for t in text.split('\\')]), end="")
+    
