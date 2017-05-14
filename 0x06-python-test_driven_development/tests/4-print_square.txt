@@ -27,7 +27,7 @@ size of 4
 ####
 
 size of 0
->>> print_square(0)
+>>> print_square(0) # doctest: +NORMALIZE_WHITESPACE, +REPORT_CDIFF
 <BLANKLINE>
 
 size of True
