@@ -53,28 +53,3 @@ No less than 2 arguments
   >>> add_integer(1)
   Traceback (most recent call last):
   TypeError: add_integer() missing 1 required positional argument: 'b'
-  
-Testing exceptions - all the following are expected to fail
-  >>> def test_exceptions(func, tests):
-  ...     for test in tests:
-  ...         try:
-  ...             func(test[0], test[1])
-  ...         except Exception as e:
-  ...             pass
-  ...		    print("Failed with {} for input {} and {}".format(type(e).__name__, type(test[0]), type(test[1])))
-  ...         else:
-  ...             print("Did not fail for input {} and {}".format(test[0], test[1]))
-  >>> tests = [(1, "a"), (2.3, "a string"), (1, [1, 2]), (1.2, [1, 2]), (1, set("abracadabra")), (1.5, set("abracadabra")), (5, {"a":1, "b":4.5}), (3, test_exceptions), (4, range(5)), (3.45, b'byte literal'), (3.5, None)] 
-  >>> test_exceptions(add_integer, tests)
-  Failed with TypeError for input <class 'int'> and <class 'str'>
-  Failed with TypeError for input <class 'float'> and <class 'str'>
-  Failed with TypeError for input <class 'int'> and <class 'list'>
-  Failed with TypeError for input <class 'float'> and <class 'list'>
-  Failed with TypeError for input <class 'int'> and <class 'set'>
-  Failed with TypeError for input <class 'float'> and <class 'set'>
-  Failed with TypeError for input <class 'int'> and <class 'dict'>
-  Failed with TypeError for input <class 'int'> and <class 'function'>
-  Failed with TypeError for input <class 'int'> and <class 'range'>
-  Failed with TypeError for input <class 'float'> and <class 'bytes'>
-  Failed with TypeError for input <class 'float'> and <class 'NoneType'>
-
