@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 """
-This module is task 3 for 0x06-python-test_driven_development
+This module "3-say_my_name" is task 3
+for 0x06-python-test_driven_development and
+completed for Holberton School coursework.
 
-This module supplies one function: `say_my_name`
+This module supplies one function: say_my_name().
 
-To test, a text file is provided in the /tests directory. To run:
-`python3 -m doctest -v ./tests/3-say_my_name.txt`
+To test, run: `python3 -m doctest -v ./tests/3-say_my_name.txt`
 """
+
+
 def say_my_name(first_name, last_name=""):
     """
     This function prints "My name is " followed by arguments

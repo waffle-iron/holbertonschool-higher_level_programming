@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-
 """
-This module is task 4 for 0x06-python-test_driven_development
+This module "5-text_indentation" is task 4
+for 0x06-python-test_driven_development and
+completed for Holberton School coursework.
 
-This module supplies one function: `text_indentation`
+This module supplies one function: text_indentation().
 
-To test, a text file is provided in the /tests directory. To run:
-`python3 -m doctest ./tests/5-text_indentation.txt`
+To test, run: `python3 -m doctest ./tests/5-text_indentation.txt`
 """
 
 

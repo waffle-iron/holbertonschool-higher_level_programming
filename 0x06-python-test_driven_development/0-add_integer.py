@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 """
-This module is task 0 for 0x06-python-test_driven_development
+This module "0-add_integer" is task 0
+for 0x06-python-test_driven_development and
+completed for Holberton School coursework.
 
-This module supplies one function: add_integer
+This module supplies one function: add_integer().
 
-To test, a text file is provided in the /tests directory. To run:
-`python3 -m doctest -v ./tests/0-add_integer.txt`
+To test, run: `python3 -m doctest -v ./tests/0-add_integer.txt`
 """
+
+
 def add_integer(a, b):
     """
     This function calculates the sum of two integers

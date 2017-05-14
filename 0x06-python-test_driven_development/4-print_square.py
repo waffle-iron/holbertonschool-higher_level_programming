@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """
-This module is task 3 for 0x06-python-test_driven_development
+This module "4-print_square" is task 3
+for 0x06-python-test_driven_development and
+completed for Holberton School coursework.
 
-This module supplies one function: `print_square`
+This module supplies one function: print_square().
 
-To test, a text file is provided in the /tests directory. To run:
-`python3 -m doctest -v ./tests/4-print_square.txt`
+To test, run: `python3 -m doctest -v ./tests/4-print_square.txt`
 """
 
 
