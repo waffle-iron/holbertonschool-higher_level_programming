@@ -1,0 +1,74 @@
+============================
+ Module for ``4-square.py``
+============================
+This is a doctest file to test the above module
+
+====================
+ Usage instructions
+====================
+
+Import ``Square`` from the ``4-square`` module:
+
+>>> Square = __import__('4-square').Square
+
+Now use it:
+=========================
+ Takes an simple integer
+=========================
+>>> my_sq = Square(9)
+>>> my_sq.size
+9
+>>> my_sq.area()
+81
+
+
+=======================
+ Takes a large integer
+=======================
+>>> my_sq = Square(100000000000000000000000000000000000000000000000000000)
+>>> my_sq.size
+100000000000000000000000000000000000000000000000000000
+>>> my_sq.area()
+10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+======================
+ Takes no size passed
+======================
+>>> my_sq = Square()
+>>> my_sq.size
+0
+>>> my_sq.area()
+0
+
+
+===============================
+ Takes no Boolean types passed
+===============================
+>>> my_sq = Square(True)
+>>> my_sq.size
+True
+>>> my_sq.area()
+1
+>>> my_sq = Square(False)
+>>> my_sq.size
+False
+>>> my_sq.area()
+0
+
+>>> my_sq = Square(89)
+>>> my_sq.size=3
+>>> my_sq.area()
+9
+
+===================
+ Expected failures
+===================
+>>> my_sq.size='string'
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> my_sq.size=-17
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
