@@ -21,9 +21,11 @@ class Square:
     **Functions**
     __init__(self, size)
     area(self)
+    my_print(self)
 
     **Example**
     my_square_1 = Square(3)
+    my_square.my_print()
     """
 
     def __init__(self, size=0):
