@@ -20,6 +20,7 @@ class Square:
 
     **Functions**
     __init__(self, size)
+    area(self)
 
     **Example**
     my_square_1 = Square(3)
@@ -40,12 +41,14 @@ class Square:
         else:
             self.__size = size
 
-    def __init__(self, area):
+    def area(self):
         """
         public instance to return square area
 
-        Arguments:
-        size must be an integer
-        size must be >= 0
+        same arguments
+
+        return:
+        area of a square(int)
+
         """
         return(__size * __size)
