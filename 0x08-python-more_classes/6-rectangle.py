@@ -13,11 +13,14 @@ class Rectangle:
     Attributes:
         width - private instance
         height - private instance
+        number_of_instances - public instance
     Functions:
         __init__(self, width=0, height=0)
         area(self)
         perimeter(self)
     """
+
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """This instantiates an object based on Rectangle class
@@ -30,6 +33,7 @@ class Rectangle:
         """
         self.__width = width
         self.__height = height
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
@@ -105,7 +109,6 @@ class Rectangle:
         """
         return("Rectangle ({:d}, {:d})".format(self.__width, self.__height))
 
-    number_of_instances = 0
     def __del__(self):
         """class method specific way to delete instance
         """
