@@ -81,15 +81,15 @@ This project is completed as an exploration of the concept of classes and object
 | Task # | Type | Short description | File name and link |
 | ---: | --- | --- | --- |
 |0| **Mandatory**  |<p>Write an empty class <code>Rectangle</code> that defines a rectangle:</p> | File: [0-rectangle.py](./0-rectangle.py)
-|1| **Mandatory**  |<p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>0-rectangle.py</code>)</p><ul><li>Private instance attribute: <code>width</code>:    <li>property <code>def width(self):</code> to retrieve it</li>    <li>property setter <code>def width(self, value):</code> to set it:	<li><code>width</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>width must be an integer</code><br></li>	<li>if <code>width</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>width must be &gt;= 0</code></li><li>Private instance attribute: <code>height</code>:    <li>property <code>def height(self):</code> to retrieve it</li>    <li>property setter <code>def height(self, value):</code> to set it:	<li><code>height</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>height must be an integer</code><br></li>	<li>if <code>height</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>height must be &gt;= 0</code></li><li>Instantiation with optional <code>width</code> and <code>height</code>: <code>def __init__(self, width=0, height=0):</code></li><li>You are not allowed to import any module</li></ul><p><strong>No test cases needed</strong></p> | File: [1-rectangle.py](./1-rectangle.py)
-|2| **Mandatory**  | | File: [2-rectangle.py](./2-rectangle.py)
-|3| **Mandatory**  | | File: [3-rectangle.py](./3-rectangle.py)
-|4| **Mandatory**  | | File: [4-rectangle.py](./4-rectangle.py)
-|5| **Mandatory**  | | File: [5-rectangle.py](./5-rectangle.py)
-|6| **Mandatory**  | | File: [6-rectangle.py](./6-rectangle.py)
-|7| **Mandatory**  | | File: [7-rectangle.py](./7-rectangle.py)
-|8| **Mandatory**  | | File: [8-rectangle.py](./8-rectangle.py)
-|9| **Mandatory**  | | File: [9-rectangle.py](./9-rectangle.py)
+|1| **Mandatory**  |<p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>1-rectangle.py</code>)</p> | File: [1-rectangle.py](./1<p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>0-rectangle.py</code>)</p> | File: [1-rectangle.py](./1-rectangle.py)
+|2| **Mandatory**  |<p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>1-rectangle.py</code>)</p> | File: [2-rectangle.py](./2-rectangle.py)
+|3| **Mandatory**  |<p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>2-rectangle.py</code>)</p> | File: [3-rectangle.py](./3-rectangle.py)
+|4| **Mandatory**  |<p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>3-rectangle.py</code>)</p> | File: [4-rectangle.py](./4-rectangle.py)
+|5| **Mandatory**  |<p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>4-rectangle.py</code>)</p> | File: [5-rectangle.py](./5-rectangle.py)
+|6| **Mandatory**  |<p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>5-rectangle.py</code>)</p> | File: [6-rectangle.py](./6-rectangle.py)
+|7| **Mandatory**  |<p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>6-rectangle.py</code>)</p> | File: [7-rectangle.py](./7-rectangle.py)
+|8| **Mandatory**  |<p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>7-rectangle.py</code>)</p> | File: [8-rectangle.py](./8-rectangle.py)
+|9| **Mandatory**  |<p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>8-rectangle.py</code>)</p> | File: [9-rectangle.py](./9-rectangle.py)
 
 
 
