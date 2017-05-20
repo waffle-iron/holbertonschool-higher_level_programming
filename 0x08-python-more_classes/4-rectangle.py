@@ -102,4 +102,5 @@ class Rectangle:
         """
         class method specific way to reproduce output
         """
-        return("{}".format("hello"))
+        return("({d}, {:d})".format(self.__width, self.__height))
+
