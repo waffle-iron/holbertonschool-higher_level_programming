@@ -94,6 +94,5 @@ class Rectangle:
         else:
             pubheight = self.__height
             pubwidth = self.__width
-            string = ('\n'.join("#" * pubheight * pubwidth)
-#            string = (pubheight * ('#' * pubwidth + '\n'))
+            string = ''.join(('#' * pubheight + '\n') * pubwidth)
             return (string)
