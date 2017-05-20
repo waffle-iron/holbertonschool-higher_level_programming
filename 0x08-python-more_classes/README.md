@@ -1,12 +1,12 @@
 # 0x08. Python - More Classes and Objects
-![image](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/247/oop-meme.jpg)
+[![image](https://imgs.xkcd.com/comics/bonding.png)](https://xkcd.com/1188/)
 
 **Author: [Elaine Yeung](https://twitter.com/egsy)**
 
 *Holberton School | January 2017 Batch 2*
 
 ## Synopsis
-This project is completed as an introduction to the Python programming language.
+This project is completed as an exploration of the concept of classes and objects in the Python programming language.
 
 ### Resources 
 - A simple introduction to <a href="htps:/python.swaroopch.com/oop.html">Object Oriented Programming</a> without going into much detail:
@@ -80,8 +80,8 @@ This project is completed as an introduction to the Python programming language.
 
 | Task # | Type | Short description | File name and link |
 | ---: | --- | --- | --- |
-|0| **Mandatory**  | | File: [0-rectangle.py](./0-rectangle.py)
-|1| **Mandatory**  | | File: [1-rectangle.py](./1-rectangle.py)
+|0| **Mandatory**  |<p>Write an empty class <code>Rectangle</code> that defines a rectangle:</p> | File: [0-rectangle.py](./0-rectangle.py)
+|1| **Mandatory**  |<p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>0-rectangle.py</code>)</p><ul><li>Private instance attribute: <code>width</code>:    <li>property <code>def width(self):</code> to retrieve it</li>    <li>property setter <code>def width(self, value):</code> to set it:	<li><code>width</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>width must be an integer</code><br></li>	<li>if <code>width</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>width must be &gt;= 0</code></li><li>Private instance attribute: <code>height</code>:    <li>property <code>def height(self):</code> to retrieve it</li>    <li>property setter <code>def height(self, value):</code> to set it:	<li><code>height</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>height must be an integer</code><br></li>	<li>if <code>height</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>height must be &gt;= 0</code></li><li>Instantiation with optional <code>width</code> and <code>height</code>: <code>def __init__(self, width=0, height=0):</code></li><li>You are not allowed to import any module</li></ul><p><strong>No test cases needed</strong></p> | File: [1-rectangle.py](./1-rectangle.py)
 |2| **Mandatory**  | | File: [2-rectangle.py](./2-rectangle.py)
 |3| **Mandatory**  | | File: [3-rectangle.py](./3-rectangle.py)
 |4| **Mandatory**  | | File: [4-rectangle.py](./4-rectangle.py)
@@ -90,3 +90,6 @@ This project is completed as an introduction to the Python programming language.
 |7| **Mandatory**  | | File: [7-rectangle.py](./7-rectangle.py)
 |8| **Mandatory**  | | File: [8-rectangle.py](./8-rectangle.py)
 |9| **Mandatory**  | | File: [9-rectangle.py](./9-rectangle.py)
+
+
+
