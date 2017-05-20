@@ -140,4 +140,4 @@ class Rectangle:
             size (int): Defaults to 0.
         Return: a new Rectangle instance with width == height == size
         """
-        return (cls(size * size))
+        return (cls(size, size))
