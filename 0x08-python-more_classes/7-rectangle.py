@@ -20,7 +20,7 @@ class Rectangle:
     """
 
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """This instantiates an object based on Rectangle class
@@ -102,7 +102,7 @@ class Rectangle:
         else:
             pubheight = self.__height
             pubwidth = self.__width
-            string = ''.join((self.print_symbol * pubwidth + '\n') * pubheight)
+            string = ''.join((format(self.print_symbol) * pubwidth + '\n') * pubheight)
             string = string[0:-1]
             return (string)
 
