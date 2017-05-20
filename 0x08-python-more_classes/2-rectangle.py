@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module "1-rectangle" is task 1 for 0x08-python-more_classes and completed
+This module "2-rectangle" is task 2 for 0x08-python-more_classes and completed
 for Holberton School coursework.
 
 This module contains one class: Rectangle
@@ -8,7 +8,7 @@ This module contains one class: Rectangle
 
 
 class Rectangle:
-    """This class defines a rectangle based on 0-rectangle
+    """This class defines a rectangle based on 1-rectangle
 
     Attributes:
         width - private instance
