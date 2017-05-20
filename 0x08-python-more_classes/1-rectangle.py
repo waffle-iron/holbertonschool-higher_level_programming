@@ -11,7 +11,7 @@ class Rectangle:
     """This class defines a rectangle based on 0-rectangle
 
     Attributes:
-        width - private instance 
+        width - private instance
         height - private instance
     Functions:
         __init__(self, width=0, height=0)
@@ -28,14 +28,14 @@ class Rectangle:
         """
         self.__width = width
         self.__height = height
-        
+
     @property
     def width(self):
         """
         retrieves width
         """
         return (self.__width)
-        
+
     @width.setter
     def width(self, value):
         """
