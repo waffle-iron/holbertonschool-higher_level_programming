@@ -102,7 +102,8 @@ class Rectangle:
         else:
             pubheight = self.__height
             pubwidth = self.__width
-            string = ''.join((format(self.print_symbol) * pubwidth + '\n') * pubheight)
+            string = ''.join((format(self.print_symbol) *
+                              pubwidth + '\n') * pubheight)
             string = string[0:-1]
             return (string)
 
@@ -129,4 +130,4 @@ class Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() >= rect_2.area():
             return (rect_1)
-        return(rect_2)
+        return(rect_2)105
