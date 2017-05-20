@@ -35,8 +35,8 @@ class Square:
         size must be an integer
         size must be >= 0
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -69,10 +69,12 @@ class Square:
         """
         property setter def position(self, value) to set position
         """
-        if not isinstance(value, tuple) or all(value) < 0:
+        if not isinstance(value, tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")            
+        elif all(value) < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
-            self.__position = position
+            self.__position = value
 
     def area(self):
         """
