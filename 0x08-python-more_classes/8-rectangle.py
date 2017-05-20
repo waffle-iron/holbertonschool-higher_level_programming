@@ -34,8 +34,8 @@ class Rectangle:
             ValueError: If `width` is less than 0
             TypeError: If `width` not an integer
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
         type(self).number_of_instances += 1
 
     @property
@@ -130,4 +130,4 @@ class Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() >= rect_2.area():
             return (rect_1)
-        return(rect_2)105
+        return(rect_2)
