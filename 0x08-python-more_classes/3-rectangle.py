@@ -70,8 +70,9 @@ class Rectangle:
             self.__height = value
 
     def area(self):
-        """
-        
+        """public instance method
+        Returns:
+                rectangle area
         """
         return (self.__height * self.__width)
 
