@@ -50,8 +50,8 @@ class Rectangle:
         """
         sets value of width
         """
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
+        if type(value) is not int:
+            TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
         else:
@@ -69,7 +69,7 @@ class Rectangle:
         """
         sets value of height
         """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
@@ -116,8 +116,8 @@ class Rectangle:
     def __del__(self):
         """class method specific way to delete instance
         """
-        type(self).number_of_instances -= 1
         print("Bye rectangle...")
+        type(self).number_of_instances -= 1
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
