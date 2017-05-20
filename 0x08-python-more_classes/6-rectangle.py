@@ -11,9 +11,7 @@ class Rectangle:
     """This class defines a rectangle based on 4-rectangle
 
     Attributes:
-        width - private instance
-        height - private instance
-        number_of_instances - public instance
+        number_of_instances - public, default to 0
     Functions:
         __init__(self, width=0, height=0)
         area(self)
@@ -24,6 +22,9 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """This instantiates an object based on Rectangle class
+        Attributes:
+            width (int): private, Defaults to 0.
+            height (int): private, Defaults to 0.
         Args:
             width (int): Defaults to 0.
             height (int): Defaults to 0.
