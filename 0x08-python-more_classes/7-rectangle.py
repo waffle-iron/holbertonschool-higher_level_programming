@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module "5-rectangle" is task 5 for 0x08-python-more_classes and completed
+This module "7-rectangle" is task 7 for 0x08-python-more_classes and completed
 for Holberton School coursework.
 
 This module contains one class: Rectangle
@@ -8,7 +8,7 @@ This module contains one class: Rectangle
 
 
 class Rectangle:
-    """This class defines a rectangle based on 4-rectangle
+    """This class defines a rectangle based on 6-rectangle
 
     Attributes:
         number_of_instances - public, default to 0
@@ -20,6 +20,7 @@ class Rectangle:
     """
 
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """This instantiates an object based on Rectangle class
@@ -101,7 +102,7 @@ class Rectangle:
         else:
             pubheight = self.__height
             pubwidth = self.__width
-            string = ''.join(('#' * pubwidth + '\n') * pubheight)
+            string = ''.join((self.print_symbol * pubwidth + '\n') * pubheight)
             string = string[0:-1]
             return (string)
 
