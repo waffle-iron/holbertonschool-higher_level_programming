@@ -84,3 +84,16 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return (0)
         return ((self.__height * 2) + (self.__width * 2))
+
+    def __str__(self):
+        """
+        class method specific way for string output
+        """
+        if self.__height == 0 or self.__width == 0:
+            return ("")
+        else:
+            pubheight = self.__height
+            pubwidth = self.__width
+            string = (pubheight * ('#' * pubwidth + '\n'))
+            return string
+    
