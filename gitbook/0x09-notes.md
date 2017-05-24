@@ -8,7 +8,7 @@ Now that we understand that everything is object and have a little bit of knowle
 >>> a = 2
 >>> b
 1
->>> 
+>>>
 ```
 
 OK. But what about this?
@@ -19,11 +19,11 @@ OK. But what about this?
 >>> l[0] = 'x'
 >>> m
 ['x', 2, 3]
->>> 
+>>>
 ```
 
-![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/252/giphy-5.gif "Blow")  
-  
+![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/252/giphy-5.gif "Blow")
+
 This project is a little bit different than usual projects. The first part is only questions about Python's specificity like "What should be the result of...". You should read all documentation first \(as usual :\)\), then take the time to think and brainstorm with your peers about what you think and why. Try to do this without coding anything for a few hours. Trying examples in the Python interpreter will give you most of the answers without having to think about it. Don't go this route. First read, then think, then brainstorm together. Only then you can test in the interpreter. It's important that you truly understand the reasons behind the answers of all those tasks so that you can apply the same logic to other variables and other variable types. The biggest mandatory task is the blog post and it will count for 50% of the total score of the project.
 
 ## RTFM
@@ -37,7 +37,7 @@ a = "banana"
 b = "banana"
 ```
 
-we know that a and b will refer to a string with the letters"banana". But we don’t know yet whether they point to the _same _string.
+we know that a and b will refer to a string with the letters"banana". But we don’t know yet whether they point to the \_same \_string.
 
 There are two possible states:
 
@@ -52,7 +52,7 @@ We can test whether two names have the same value using==:
 True
 ```
 
-We can test whether two names refer to the same object using the_is_operator:
+We can test whether two names refer to the same object using the\_is\_operator:
 
 ```py
 >>> a is b
@@ -123,204 +123,97 @@ Well you agree strings are immutable right? But you can do the same thing.
 s = 'foo'
 s += 'bar'
 print s # foobar
-
 ```
 
-
-
-The value of the variable changes, but it changes by changing what the variable refers to. A mutable type can change that way, and it can_also_change "in place".
+The value of the variable changes, but it changes by changing what the variable refers to. A mutable type can change that way, and it can\_also\_change "in place".
 
 Here is the difference.
 
 ```
-x 
-=
- something 
-# immutable type
-print
- x
-func
-(
-x
-)
-print
- x 
-# prints the same thing
+x = something # immutable type
+print x
+func(x)
+print x # prints the same thing
 
+x = something # mutable type
+print x
+func(x)
+print x # might print something different
 
-x 
-=
- something 
-# mutable type
-print
- x
-func
-(
-x
-)
-print
- x 
-# might print something different
-
-
-x 
-=
- something 
-# immutable type
-
-y 
-=
- x
-
-print
- x
-
+x = something # immutable type
+y = x
+print x
 # some statement that operates on y
-print
- x 
-# prints the same thing
+print x # prints the same thing
 
-
-x 
-=
- something 
-# mutable type
-
-y 
-=
- x
-
-print
- x
-
+x = something # mutable type
+y = x
+print x
 # some statement that operates on y
-print
- x 
-# might print something different
+print x # might print something different
 ```
 
 Concrete examples
 
 ```
-x 
-=
-'foo'
+x = 'foo'
+y = x
+print x # foo
+y += 'bar'
+print x # foo
 
-y 
-=
- x
+x = [1, 2, 3]
+y = x
+print x # [1, 2, 3]
+y += [3, 2, 1]
+print x # [1, 2, 3, 3, 2, 1]
 
-print
- x 
-# foo
+def func(val):
+    val += 'bar'
 
-y 
-+=
-'bar'
-print
- x 
-# foo
+x = 'foo'
+print x # foo
+func(x)
+print x # foo
 
+def func(val):
+    val += [3, 2, 1]
 
-x 
-=
-[
-1
-,
-2
-,
-3
-]
-
-y 
-=
- x
-
-print
- x 
-# [1, 2, 3]
-
-y 
-+=
-[
-3
-,
-2
-,
-1
-]
-print
- x 
-# [1, 2, 3, 3, 2, 1]
-def
- func
-(
-val
-):
-
-    val 
-+=
-'bar'
-
-
-x 
-=
-'foo'
-print
- x 
-# foo
-
-func
-(
-x
-)
-print
- x 
-# foo
-def
- func
-(
-val
-):
-
-    val 
-+=
-[
-3
-,
-2
-,
-1
-]
-
-
-x 
-=
-[
-1
-,
-2
-,
-3
-]
-print
- x 
-# [1, 2, 3]
-
-func
-(
-x
-)
-print
- x 
-# [1, 2, 3, 3, 2, 1]
+x = [1, 2, 3]
+print x # [1, 2, 3]
+func(x)
+print x # [1, 2, 3, 3, 2, 1]
 ```
-
-
 
 ### [Mutation](http://www-inst.eecs.berkeley.edu/~selfpace/cs9honline/Q2/mutation.html)
 
+In Python, all variables _refer _to things. When you write `x = 3`, you are making `x` refer to `3`. You could depict this by drawing an arrow from the name `x` to the value `3`, like this:
 
+![](http://www-inst.eecs.berkeley.edu/~selfpace/cs9honline/Q2/x-arrow-3.png)
+
+Figure 1.
+
+After `x = 3`, the name `x` refers to the value `3`.
+
+Every time you use a variable name, you're telling Python to follow that arrow. For example, to evaluate the expression`x + 2`, Python follows the arrow from the`x`to the`3`, then adds 3 to 2. Simple enough, right?
+
+When you assign the value of one variable to another variable, they both refer to the same thing. Suppose`a`refers to the list`[3, 4, 5]`, and then you say`b = a`:
+
+![](http://www-inst.eecs.berkeley.edu/~selfpace/cs9honline/Q2/assign-a-b.png)
+
+Figure 2.
+
+After `b = a`, the name `b` refers to the same list as `a` does.
+
+There's still_only one list_; it's just referred to by two different names.
+
+Why does this matter? Well, look at what happens if you now say`a.append(1)`. An extra element is added to the end of the list.
+
+![](http://www-inst.eecs.berkeley.edu/~selfpace/cs9honline/Q2/a-append-1.png)
+
+Figure 3.
+
+The contents of the list are changed. Both`a`and`b`still refer to the same list, which is now`[3, 4, 5, 1]`.
 
 ### [9.12. Cloning lists](http://www.openbookproject.net/thinkcs/python/english2e/ch09.html#cloning-lists)
 
@@ -345,13 +238,7 @@ Now we are free to make changes to `b` without worrying about `a`:
 [1, 2, 3]
 ```
 
-
-
 ### [Python tuples: immutable but potentially changing](http://radar.oreilly.com/2014/10/python-tuples-immutable-but-potentially-changing.html)
-
-
-
-
 
 
 
