@@ -107,6 +107,42 @@ Although this behavior can be useful, it is sometimes unexpected or undesirable.
 
 ### [Immutable vs mutable types](http://stackoverflow.com/questions/8056130/immutable-vs-mutable-types)
 
+I'm confused on what an immutable type is. I know the`float`object is considered to be immutable, with this type of example from my book:
+
+```
+class RoundFloat(float):
+    def __new__(cls, val):
+        return float.__new__(cls, round(val, 2))
+```
+
+Is this considered to be immutable because of the class structure / hierarchy?, meaning`float`is at the top of the class and is its own method call. Similar to this type of example \(even though my book says`dict`is mutable\):
+
+```
+class SortedKeyDict(dict):
+    def __new__(cls, val):
+        return dict.__new__(cls, val.clear())
+```
+
+Whereas something mutable has methods inside the class, with this type of example:
+
+```
+class SortedKeyDict_a(dict):
+    def example(self):
+        return self.keys()
+```
+
+---
+
+Also, for the last`class(SortedKeyDict_a)`, if I pass this type of set to it:
+
+```
+d = (('zheng-cai', 67), ('hui-jun', 68),('xin-yi', 2))
+```
+
+without calling the`example`method, it returns a dictionary. The`SortedKeyDict`with`__new__`flags it as an error. I tried passing integers to the`RoundFloat`class with`__new__`and it flagged no errors.
+
+
+
 What? Floats are immutable? But can't I do
 
 ```Python
@@ -287,12 +323,8 @@ The namest\_doomanddumare aliases. I like that the official Python docs often re
 
 After much practice, T-Doom is now a skilled rapper. In code, this is what happened:
 
-
-
 | 123456 | &gt;&gt;&gt;skills=t\_doom\[1\]&gt;&gt;&gt;skills.append\('rap'\)&gt;&gt;&gt;t\_doom\('1861-10-23',\['poetry','pretend-fight','rap'\]\)&gt;&gt;&gt;dum\('1861-10-23',\['poetry','pretend-fight','rap'\]\) |
 | :--- | :--- |
-
-
 
 
 T-Doom acquired the'rap'skill, and so did Tweedledum — of course, they are one and the same. Ift\_doomwas a box containing astrand alist, how could you explain that appending to the list int\_doomalso changes the list in thedumbox? However, it makes perfect sense if you see variables as labels.
@@ -346,7 +378,6 @@ Note that the\_\_init\_\_method displays the id of the object just created. This
 Now let’s instantiate anotherGizmoand immediately try to perform an operation with it before binding a name to the result:
 
 ```python
-
 >>> y = Gizmo() * 10
 Gizmo id: 4328764360
 Traceback (most recent call last):
@@ -355,8 +386,6 @@ TypeError: unsupported operand type(s) for *: 'Gizmo' and 'int'
 >>> 'y' in globals()
 False
 ```
-
-
 
 This snippet shows that the new object was instantiated \(its id was4328764360\) but before theyname could be created, aTypeErroraborted the assignment. The'y' in globals\(\)check proves there is noyglobal name.
 
