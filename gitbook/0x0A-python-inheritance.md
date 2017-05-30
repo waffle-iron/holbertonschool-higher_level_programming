@@ -6,9 +6,7 @@
 * [Inheritance in Python](https://www.packtpub.com/books/content/inheritance-python)
 * Watch [Learn to Program 10 : Inheritance Magic Methods](https://www.youtube.com/watch?v=d8kCdLCi6Lk)
 
-_Tip from_[_Justin Marsh_](https://twitter.com/dogonthecircuit): Read more books![Python 3 Object-oriented Programming](http://t3.gstatic.com/images?q=tbn:ANd9GcQUM0y6bxv-QJg-5SvHrf-HBUBTaid1QFxl_gJtGZisbziNydzn), Chapter 3, p59-66
-
-
+_Tip from_[_Justin Marsh_](https://twitter.com/dogonthecircuit): Read more books, Chapter 3, p59-66
 
 ---
 
@@ -46,8 +44,6 @@ Python has two built-in functions that work with inheritance:
 * Use [`issubclass()`](https://docs.python.org/3.4/library/functions.html#issubclass) to check class inheritance: `issubclass(bool, int)`is `True`
   since [`bool`](https://docs.python.org/3.4/library/functions.html#bool) is a subclass of [`int`](https://docs.python.org/3.4/library/functions.html#int) . However, `issubclass(float, int)`is `False`
   since [`float`](https://docs.python.org/3.4/library/functions.html#float) is not a subclass of [`int`](https://docs.python.org/3.4/library/functions.html#int).
-
-
 
 ---
 
@@ -107,45 +103,10 @@ This is a very simple class that allows us to track a couple pieces of data abou
 class Supplier(Contact):
  def order(self, order):
   print("If this were a real system we would send "
-            "{} order to {}".format(order, self.name))
+            "{} order to {}".format(order, self.name)
 ```
 
-  
-
-
-| [![](https://www.packtpub.com/sites/default/files/imagecache/productview/1261OS_MockupCover.jpg "Python 3 Object Oriented Programming")](https://www.packtpub.com/python-3-object-oriented-programming/book/ns/pythonoop-abr6/1210?utm_source=ns_pythonoop_abr6_1210&utm_medium=content&utm_campaign=naheed) | Harness the power of Python 3 objectsLearn how to do Object Oriented Programming in Python using this step-by-step tutorialDesign public interfaces using abstraction, encapsulation, and information hidingTurn your designs into working software by studying the Python syntaxRaise, handle, define, and manipulate exceptions using special error objectsImplement Object Oriented Programming in Python using practical examples |
-| :--- | :--- |
-
-
-| [Read more about this book](http://www.packtpub.com/python-3-object-oriented-programming/book/ns/pythonoop-abr6/1210?utm_source=ns_pythonoop_abr6_1210&utm_medium=content&utm_campaign=naheed) |  |
-| :--- | :--- |
-
-
-\(For more resources on Python, see[here](https://www.packtpub.com/books/content/inheritance-python#more).\)
-
-# Basic inheritance
-
-Technically, every class we create uses inheritance. All Python classes are subclasses of the special class named object. This class provides very little in terms of data and behaviors \(those behaviors it does provide are all double-underscore methods intended for internal use only\), but it does allow Python to treat all objects in the same way.
-
-If we don't explicitly inherit from a different class, our classes will automatically inherit from object. However, we can openly state that our class derives from object using the following syntax:
-
-```
-
-```
-
-This is inheritance! Since Python 3 automatically inherits fromobjectif we don't explicitly provide a different superclass. A**superclass**, or parent class, is a class that is being inherited from. A**subclass**is a class that is inheriting from a superclass. In this case, the superclass is object, andMySubClassis the subclass. A subclass is also said to be**derived**from its parent class or that the subclass**extends**the parent.
-
-As you've probably figured out from the example, inheritance requires a minimal amount of extra syntax over a basic class definition. Simply include the name of the parent class inside a pair of parentheses after the class name, but before the colon terminating the class definition. This is all we have to do to tell Python that the new class should be derived from the given superclass.
-
-How do we apply inheritance in practice? The simplest and most obvious use of inheritance is to add functionality to an existing class. Let's start with a simple contact manager that tracks the name and e-mail address of several people. The contact class is responsible for maintaining a list of all contacts in a class variable, and for initializing the name and address, in this simple class:
-
-```
-
-```
-
-This example introduces us to class variables. Theall\_contactslist, because it is part of the class definition, is actually shared by all instances of this class. This means that there is only**one**Contact.all\_contactslist, and if we callself.all\_contactson any one object, it will refer to that single list. The code in the initializer ensures that whenever we create a new contact, the list will automatically have the new object added. Be careful with this syntax, for if you ever set the variable usingself.all\_contacts, you will actually be creating a**new**instance variable on the object; the class variable will still be unchanged and accessible asContact.all\_contacts.
-
-This is a very simple class that allows us to track a couple pieces of data about our contacts. But what if some of our contacts are also suppliers that we need to order supplies from? We could add anordermethod to theContactclass, but that would allow people to accidentally order things from contacts who are customers or family friends. Instead, let's create a newSupplierclass that acts like aContact, but has an additionalordermethod:
+# 
 
 ```
 
@@ -195,8 +156,6 @@ class Contact:
    self.all_contacts.append(self)
 ```
 
-
-
 Instead of instantiating a normal list as our class variable, we create a new `ContactList`class that extends the built-in list. Then we instantiate this subclass as our `all_contacts`list. We can test the new search functionality as follows:
 
 ```python
@@ -206,7 +165,6 @@ Instead of instantiating a normal list as our class variable, we create a new `C
 >>> [c.name for c in Contact.all_contacts.search('John')]
 ['John A', 'John B']
 >>>
-
 ```
 
 Are you wondering how we changed the built-in syntax \[\] into something we can inherit from? Creating an empty list with \[\] is actually a shorthand for creating an empty list using list\(\); the two syntaxes are identical:
