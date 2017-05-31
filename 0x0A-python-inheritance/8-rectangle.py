@@ -28,4 +28,5 @@ class Rectangle:
         """
         returns the area
         """
-        
+        return
+    
