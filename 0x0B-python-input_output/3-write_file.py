@@ -19,5 +19,6 @@ def write_file(filename="", text=""):
     Return:
     number of characters written
     """
-    with open(filename, "r", encoding='utf-8') as my_file:
-        return(my_file.write(my_file.readline()))
+    with open(filename, "r+", encoding='utf-8') as my_file:
+        s = str(my_file)
+        my_file.write(s)
