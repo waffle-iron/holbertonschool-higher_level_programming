@@ -63,15 +63,22 @@ False
 ===================
  Expected failures
 ===================
->>> my_sq.size='string'
-Traceback (most recent call last):
-...
-TypeError: size must be an integer
+>>> not_list = MyList(['hi', 'oh dear'])
+>>> print(not_list)
+ 
+>>> not_list.print_sorted()
+ 
+ # list is tuples
+ >>> not_list1 = MyList([(4, 3), (4, 5)])
+ >>> print(not_list1)
+ >>> not_list1.print_sorted()
 
->>> my_sq.size=-17
-Traceback (most recent call last):
-...
-ValueError: size must be >= 0
+ # list is tuples again
+ >>> not_list2 = MyList([(9, 8), (5, 4)])
+ >>> print(not_list2)
+ [(9, 8), (5, 4)]
+ >>> not_list2.print_sorted()
+ [(5, 4), (9, 8)]
 
 ================
 Check docstrings
