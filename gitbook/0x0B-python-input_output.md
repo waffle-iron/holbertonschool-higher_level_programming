@@ -346,3 +346,177 @@ test succeededand again                                           ④
 3. That was so fun, let’s do it again. But this time, with mode='a' to append to the file instead of overwriting it. Appending will never harm the existing contents of the file.
 
 4. Both the original line you wrote and the second line you appended are now in the file test.log. Also note that neither carriage returns nor line feeds are included. Since you didn’t write them explicitly to the file either time, the file doesn’t include them. You can write a carriage return with the '\r' character, and/or a line feed with the '\n' character. Since you didn’t do either, everything you wrote to the file ended up on one line.④③②①
+
+
+#### 11.3.1 Character Encoding Again
+Did you notice the encoding parameter that got passed in to the open() function while you were opening a file for writing? It’s important; don’t ever leave it out! As you saw in the beginning of this chapter, files don’t contain strings, they contain bytes. Reading a “string” from a text file only works because you told Python what encoding to use to read a stream of bytes and convert it to a string. Writing text to a file presents the same problem in reverse. You can’t write characters to a file; characters are an abstraction. In order to write to the file, Python needs to know how to convert your string into a sequence of bytes. The only way to be sure it’s performing the correct conversion is to specify the encoding parameter when you open the file for writing.
+
+### 11.4 Binary Files
+
+Not all files contain text. Some of them contain pictures of my dog.
+
+
+``` Python
+>>> an_image = open('examples/beauregard.jpg', mode='rb')                ①
+>>> an_image.mode                                                        ②
+'rb'
+>>> an_image.name                                                        ③
+'examples/beauregard.jpg'
+>>> an_image.encoding                                                    ④
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  AttributeError: '_io.BufferedReader' object has no attribute 'encoding'
+```
+1. Opening a file in binary mode is simple but subtle. The only difference from opening it in text mode is that the mode parameter contains a 'b' character.
+
+2. The stream object you get from opening a file in binary mode has many of the same attributes, including mode, which reflects the mode parameter you passed into the open() function.
+
+3. Binary stream objects also have a name attribute, just like text stream objects.
+
+4. Here’s one difference, though: a binary stream object has no encoding attribute. That makes sense, right? You’re reading (or writing) bytes, not strings, so there’s no conversion for Python to do. What you get out of a binary file is exactly what you put into it, no conversion necessary.
+
+Did I mention you’re reading bytes? Oh yes you are.
+
+``` Python
+# continued from the previous example
+>>> an_image.tell()
+0
+>>> data = an_image.read(3)  ①
+>>> data
+b'\xff\xd8\xff'
+>>> type(data)               ②
+<class 'bytes'>
+>>> an_image.tell()          ③
+3
+>>> an_image.seek(0)
+0
+>>> data = an_image.read()
+>>> len(data)
+3150
+```
+
+1. Like text files, you can read binary files a little bit at a time. But there’s a crucial difference…
+
+2. …you’re reading bytes, not strings. Since you opened the file in binary mode, the read() method takes the number of bytes to read, not the number of characters.
+
+3. That means that there’s never an unexpected mismatch between the number you passed into the read() method and the position index you get out of the tell() method. The read() method reads bytes, and the seek() and tell() methods track the number of bytes read. For binary files, they’ll always agree.③②
+
+
+## 19.2. json — JSON encoder and decoder
+JSON (JavaScript Object Notation), specified by RFC 7159 (which obsoletes RFC 4627) and by ECMA-404, is a lightweight data interchange format inspired by JavaScript object literal syntax (although it is not a strict subset of JavaScript [1] ).
+
+json exposes an API familiar to users of the standard library marshal and pickle modules.
+
+Encoding basic Python object hierarchies:
+
+``` Python
+>>> import json
+>>> json.dumps(['foo', {'bar': ('baz', None, 1.0, 2)}])
+'["foo", {"bar": ["baz", null, 1.0, 2]}]'
+>>> print(json.dumps("\"foo\bar"))
+"\"foo\bar"
+>>> print(json.dumps('\u1234'))
+"\u1234"
+>>> print(json.dumps('\\'))
+"\\"
+>>> print(json.dumps({"c": 0, "b": 0, "a": 0}, sort_keys=True))
+{"a": 0, "b": 0, "c": 0}
+>>> from io import StringIO
+>>> io = StringIO()
+>>> json.dump(['streaming API'], io)
+>>> io.getvalue()
+'["streaming API"]'
+```
+
+Compact encoding:
+
+``` Python
+>>> import json
+>>> json.dumps([1,2,3,{'4': 5, '6': 7}], separators=(',', ':'))
+'[1,2,3,{"4":5,"6":7}]'
+```
+
+Pretty printing:
+
+``` Python
+>>> import json
+>>> print(json.dumps({'4': 5, '6': 7}, sort_keys=True, indent=4))
+{
+    "4": 5,
+	    "6": 7
+		}
+```
+Decoding JSON:
+		
+```Python		
+>>>
+>>> import json
+>>> json.loads('["foo", {"bar":["baz", null, 1.0, 2]}]')
+['foo', {'bar': ['baz', None, 1.0, 2]}]
+>>> json.loads('"\\"foo\\bar"')
+'"foo\x08ar'
+>>> from io import StringIO
+>>> io = StringIO('["streaming API"]')
+>>> json.load(io)
+['streaming API']
+```
+
+Specializing JSON object decoding:
+
+``` Python	
+>>>
+>>> import json
+>>> def as_complex(dct):
+...     if '__complex__' in dct:
+...         return complex(dct['real'], dct['imag'])
+...     return dct
+...
+>>> json.loads('{"__complex__": true, "real": 1, "imag": 2}',
+...     object_hook=as_complex)
+(1+2j)
+>>> import decimal
+>>> json.loads('1.1', parse_float=decimal.Decimal)
+Decimal('1.1')
+```
+
+Extending JSONEncoder:
+
+``` Python
+>>> import json
+>>> class ComplexEncoder(json.JSONEncoder):
+...     def default(self, obj):
+...         if isinstance(obj, complex):
+...             return [obj.real, obj.imag]
+...         # Let the base class default method raise the TypeError
+...         return json.JSONEncoder.default(self, obj)
+...
+>>> json.dumps(2 + 1j, cls=ComplexEncoder)
+'[2.0, 1.0]'
+>>> ComplexEncoder().encode(2 + 1j)
+'[2.0, 1.0]'
+>>> list(ComplexEncoder().iterencode(2 + 1j))
+['[2.0', ', 1.0', ']']
+```
+
+Using json.tool from the shell to validate and pretty-print:
+
+``` bash
+$ echo '{"json":"obj"}' | python -m json.tool
+{
+"json": "obj"
+}
+$ echo '{1.2:3.4}' | python -m json.tool
+Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+```
+
+> Note JSON is a subset of YAML 1.2. The JSON produced by this module’s default settings (in particular, the default separators value) is also a subset of YAML 1.0 and 1.1. This module can thus also be used as a YAML serializer.
+
+
+### 19.2.1. Basic Usage
+### 19.2.2. Encoders and Decoders
+### 19.2.3. Standard Compliance and Interoperability
+#### 19.2.3.1. Character Encodings
+#### 19.2.3.2. Infinite and NaN Number Values
+#### 19.2.3.3. Repeated Names Within an Object
+#### 19.2.3.4. Top-level Non-Object, Non-Array Values
+#### 19.2.3.5. Implementation Limitations
