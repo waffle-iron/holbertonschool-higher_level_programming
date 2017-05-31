@@ -68,10 +68,11 @@ Expected Success
 
  
 Expected Failure:
+=================
 # name: string, value: 0
->>> base.integer_validator("zero", 0)
+>>> base.integer_validator("string", 0)
 Traceback (most recent call last):
-ValueError: zero must be greater than 0
+ValueError: string must be greater than 0
 
 # name: string, value: negative integer
 >>> base.integer_validator("hello", -7)
