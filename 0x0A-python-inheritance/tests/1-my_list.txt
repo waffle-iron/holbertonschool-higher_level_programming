@@ -76,16 +76,17 @@ ValueError: size must be >= 0
 ================
 Check docstrings
 ================
->>> print(__import__("1-my_list").__doc__)
-
+>>> print(__import__("1-my_list").__doc__) #doctest: +NORMALIZE_WHITESPACE
+<BLANKLINE>
 This is module 1-my_list
-
+<BLANKLINE>
 This module contains one class and one public instance method
-
+<BLANKLINE>
 Access test for this class in /tests subfolder - to run:
 `python 3 -m doctest ./tests/1-my_list.txt`
+<BLANKLINE>
 
->>> print(__import__("1-my_list").MyList.__doc__)
+>>> print(__import__("1-my_list").MyList.__doc__) #doctest: +NORMALIZE_WHITESPACE
 <BLANKLINE>
 inherits from `list`
 <BLANKLINE>
@@ -96,7 +97,8 @@ Args:
 <BLANKLINE>
 Returns:
 <BLANKLINE>
->>> print(__import__("1-my_list").MyList.print_sorted.__doc__)
+
+>>> print(__import__("1-my_list").MyList.print_sorted.__doc__) #doctest: +NORMALIZE_WHITESPACE
 <BLANKLINE>
     prints the list, but sorted (ascending sort)
 <BLANKLINE>
