@@ -24,4 +24,4 @@ def append_write(filename="", text=""):
     with open(filename, 'a', encoding='utf-8') as my_file:
         my_file.write(text)
     with open(filename, 'r', encoding='utf-8') as my_file:
-        print(my_file.read())
+        return(my_file.read(text))
