@@ -6,25 +6,36 @@ This module contains one function
 """
 
 
-class Square:
+Rectangle = __import__('9-rectangle').Rectangle
+
+class Square(Rectangle):
     """
-    inherits class from BaseGeometry (7-base_geometry)
+    inherits class from Rectangle (9-rectangle.py)
 
     Instantiation with width and height:
-    def __init__(self, width, height):
-    width and height must be private. No getter or setter
-    width and height must be positive integers, validated by integer_validator
+    Instantiation with size: def __init__(self, size)::
+    size must be private. No getter or setter
+    size must be a positive integer, validated by integer_validator
 
     Args:
-    width
-    height
+    size
     Returns:
     area of shape
     """
 
-    def __init__(self, width, height):
+    def __init__(self, size):
         """
-        returns the area
+        public instantiation
         """
-        return
-    
+        self.__size = size
+        self.__width = size
+        self.__height = size
+        super().__init__(size, size)
+
+    def __str__(self):
+        """
+        instance method to determine area of square
+        """
+        return ("[Rectangle] {:d}/{:d}".
+                format(self.__width,
+                       self.__height))
