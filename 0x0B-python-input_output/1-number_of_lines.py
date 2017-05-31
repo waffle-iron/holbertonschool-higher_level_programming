@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """
-This is module 0-read_file
+This is module 1-number_of_lines
 
-This module contains one function `read_file()`
+This module contains one function `number_of_lines`
 """
 
 
-#!/usr/bin/python3
 def number_of_lines(filename=""):
     """Write a function that returns the number of lines of a text file
     You must use the with statement
