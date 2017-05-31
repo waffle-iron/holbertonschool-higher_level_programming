@@ -1,0 +1,102 @@
+============================
+ Module for ``1-my_list.py``
+============================
+This is a doctest file to test the above module
+
+====================
+ Usage instructions
+====================
+
+Import ``MyList`` from the ``1-my_list`` module:
+
+>>> MyList = __import__('1-my_list').MyList
+      
+
+Now use it:
+================
+Expected Success
+================
+
+>>> my_list = MyList([5, 6, 7, 8])
+>>> print(my_list)
+[5, 6, 7, 8]
+>>> my_list.print_sorted()
+hey
+
+>>> my_list1 = MyList([9, 6, 4, 1])
+what
+
+>>> print(my_list1)
+is
+
+>>> my_list1.print_sorted()
+up
+
+>>> my_list2 = MyList([5, 8, 2, 0])
+hey
+
+>>> print(my_list2)
+hey
+
+>>> my_list2.print_sorted()
+hey
+
+==============================
+ Takes no Boolean types passed
+===============================
+>>> my_sq = Square(True)
+>>> my_sq.size
+True
+>>> my_sq.area()
+1
+>>> my_sq = Square(False)
+>>> my_sq.size
+False
+>>> my_sq.area()
+0
+
+>>> my_sq = Square(89)
+>>> my_sq.size=3
+>>> my_sq.area()
+9
+
+===================
+ Expected failures
+===================
+>>> my_sq.size='string'
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> my_sq.size=-17
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+================
+Check docstrings
+================
+>>> print(__import__("1-my_list").__doc__)
+
+This is module 1-my_list
+
+This module contains one class and one public instance method
+
+Access test for this class in /tests subfolder - to run:
+`python 3 -m doctest ./tests/1-my_list.txt`
+
+>>> print(__import__("1-my_list").MyList.__doc__)
+<BLANKLINE>
+inherits from `list`
+<BLANKLINE>
+Public instance method:
+`def print_sorted(self):`
+<BLANKLINE>
+Args:
+<BLANKLINE>
+Returns:
+<BLANKLINE>
+>>> print(__import__("1-my_list").MyList.print_sorted.__doc__)
+<BLANKLINE>
+    prints the list, but sorted (ascending sort)
+<BLANKLINE>
