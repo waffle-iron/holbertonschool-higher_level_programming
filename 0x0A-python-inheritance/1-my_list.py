@@ -11,11 +11,14 @@ class MyList(list):
     inherits from `list`
 
     Public instance method:
-    `def print_sorted(self):` that prints the list, but sorted (ascending sort)
+    `def print_sorted(self):` 
 
     Args:
 
     Returns:
     """
     def print_sorted(self):
-        list(self)
+        """
+        prints the list, but sorted (ascending sort)
+        """
+        print(set(self))
