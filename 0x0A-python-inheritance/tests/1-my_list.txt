@@ -41,24 +41,28 @@ hey
 >>> my_list2.print_sorted()
 hey
 
-==============================
- Takes no Boolean types passed
-===============================
->>> my_sq = Square(True)
->>> my_sq.size
-True
->>> my_sq.area()
-1
->>> my_sq = Square(False)
->>> my_sq.size
-False
->>> my_sq.area()
-0
+ # int list: descending order
+ >>> my_list1 = MyList([9, 6, 4, 1])
+ >>> print(my_list1)
+ [9, 6, 4, 1]
+ >>> my_list1.print_sorted()
+ [1, 4, 6, 9]
 
->>> my_sq = Square(89)
->>> my_sq.size=3
->>> my_sq.area()
-9
+ # int list: mixed order
+ >>> my_list2 = MyList([5, 8, 2, 0])
+ >>> print(my_list2)
+ [5, 8, 2, 0]
+ >>> my_list2.print_sorted()
+ [0, 2, 5, 8]
+
+ # Bool list
+ >>> bool_list = MyList([True, False])
+ >>> print(bool_list)
+ [True, False]
+ >>> bool_list.print_sorted()
+ [False, True]
+
+ 
 
 ===================
  Expected failures
