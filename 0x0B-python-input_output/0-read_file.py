@@ -10,7 +10,9 @@ def read_file(filename=""):
     """
     a function that reads a text file (UTF8) and prints it to stdout
     You must use the with statement
-    You don't need to manage file permission/file doesn't exist exceptions.
+    Args:
+    filename
     """
-    with open(self, encoding='utf-8') as my_file:
-        print(my_file)
+    with open(filename, "r", encoding='utf-8') as my_file:
+        print(my_file.read())
+        
