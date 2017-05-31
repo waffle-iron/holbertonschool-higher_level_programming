@@ -10,9 +10,12 @@ class BaseGeometry:
     """
     This class contains one public instance method:
     `def area(self)`
-
-    Raises:
-    Exception with the message
     """
 
-    raise ("area() is not implemented")
+    def area(self):
+        """
+        public method to determine area
+        Raises:
+        Exception with the message
+        """
+        raise Exception("area() is not implemented")
