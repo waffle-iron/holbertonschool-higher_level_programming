@@ -28,10 +28,17 @@ class BaseGeometry:
 
     def area(self):
         """
-        returns the area
+        public method to determine area
+        Raises:
+        Exception with the message
         """
+        raise Exception("area() is not implemented")
         
     def integer_validator(self, name, value):
          """
-         validates value
+         validates value from int type
          """
+         if value.__class__ is not int:
+             raise TypeError("{} must be an integer".format(name))
+         if value <= 0:
+             raise ValueError("{} must be greater than 0".format(name))
