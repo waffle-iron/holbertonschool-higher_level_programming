@@ -17,12 +17,17 @@ class MyList(list):
     `def print_sorted(self):`
 
     Args:
+    list
 
     Returns:
+    prints to stdout list sorted by ascending order
     """
 
     def print_sorted(self):
         """
         prints the list, but sorted (ascending sort)
         """
-        print(set(self))
+        sorted_list = MyList()
+        for item in self:
+            sorted_list.append(item)
+        print(sorted(sorted_list))
