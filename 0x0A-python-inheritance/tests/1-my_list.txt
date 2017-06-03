@@ -33,7 +33,7 @@ Expected Success
 >>> my_list2 = MyList([5, 8, 2, 0])
 >>> print(my_list2) #doctest: +NORMALIZE_WHITESPACE
     [5, 8, 2, 0]
->>> my_list2.print_sorted()
+>>> my_list2.print_sorted()   #doctest: +NORMALIZE_WHITESPACE
     [0, 2, 5, 8]
 
  # int list: descending order
@@ -67,7 +67,8 @@ Expected Success
     ['hi', 'oh dear'] 
 >>> not_list.print_sorted()  #doctest: +NORMALIZE_WHITESPACE
     ['hi', 'oh dear']
- # list is tuples
+
+# list is tuples
  >>> not_list1 = MyList([(4, 3), (4, 5)])  #doctest: +NORMALIZE_WHITESPACE
  >>> print(not_list1)  #doctest: +NORMALIZE_WHITESPACE
      [(4, 3), (4, 5)]
@@ -88,18 +89,18 @@ Access test for this class in /tests subfolder - to run:
 <BLANKLINE>
 
 >>> print(__import__("1-my_list").MyList.__doc__) #doctest: +NORMALIZE_WHITESPACE
-    <BLANKLINE>
-        inherits from `list`
-    <BLANKLINE>
-        Public instance method:
-        `def print_sorted(self):`
-    <BLANKLINE>
-        Args:
-        list
-    <BLANKLINE>
-        Returns:
-        prints to stdout list sorted by ascending order
-    <BLANKLINE>
+<BLANKLINE>
+    inherits from `list`
+<BLANKLINE>
+    Public instance method:
+    `def print_sorted(self):`
+<BLANKLINE>
+    Args:
+    list
+<BLANKLINE>
+    Returns:
+    prints to stdout list sorted by ascending order
+<BLANKLINE>
 
 >>> print(__import__("1-my_list").MyList.print_sorted.__doc__) #doctest: +NORMALIZE_WHITESPACE
 <BLANKLINE>
