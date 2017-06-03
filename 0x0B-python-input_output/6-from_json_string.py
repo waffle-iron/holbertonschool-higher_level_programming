@@ -6,6 +6,7 @@ This is module 6-from_json_string
 This module contains one function `from_json_string`
 """
 
+
 def from_json_string(my_str):
     """
     function that returns an object
