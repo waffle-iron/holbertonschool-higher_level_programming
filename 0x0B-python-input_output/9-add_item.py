@@ -36,4 +36,4 @@ def add_item(filename, args):
 
 if __name__ == "__main__":
     filename = "add_item.json"
-    load_and_save(filename, sys.argv[1:])
+    add_item(filename, sys.argv[1:])
