@@ -8,6 +8,7 @@ This module contains one function
 
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """
     inherits class from Rectangle (9-rectangle.py)
