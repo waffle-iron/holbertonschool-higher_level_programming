@@ -7,7 +7,7 @@ This module contains:
 -two functions
 
 Access test for this class in /tests subfolder - to run:
-`python 3 -m doctest ./tests/7-base_geometry.txt`
+`python3 -m doctest ./tests/7-base_geometry.txt`
 """
 
 
