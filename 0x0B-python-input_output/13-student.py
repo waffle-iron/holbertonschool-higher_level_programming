@@ -46,6 +46,7 @@ class Student:
                 if hasattr(self, item):
                     dict_keys[item] = getattr(self, item)
             return (dict_keys)
+
     def reload_from_json(self, json):
         """public class method
         Replaces all attributes of the Student instance:
