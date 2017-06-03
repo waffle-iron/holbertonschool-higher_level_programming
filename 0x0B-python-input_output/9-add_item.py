@@ -2,7 +2,7 @@
 """
 This is module 9-add_item
 
-This module contains one function `add_item`
+This module contains one function `load_add_save`
 """
 
 import sys
@@ -32,7 +32,7 @@ def load_add_save(filename, args):
         new_json_object = load_from_json_file(filename)
     except FileNotFoundError:
         new_json_object = []
-    save_to_json_file(new_json_object + args, filename)
+    new_json_object = save_to_json_file(new_json_object + args, filename)
 
 if __name__ == "__main__":
     filename = "add_item.json"
