@@ -20,6 +20,7 @@ def add_item(filename, args):
     load_from_json_file from 8-load_from_json_file.py
     list must be saved as a JSON representation
     in a file named add_item.json
+
     If the file doesn't exist, it should be created
     You don't need to manage file permissions / exceptions.
 
@@ -28,9 +29,9 @@ def add_item(filename, args):
     args
     """
     try:
-        my_obj = load_from_json_file(filename)
+        new_json_object = load_from_json_file(filename)
     except FileNotFoundError:
-        my_obj = []
+        new_json_object = []
     save_to_json_file(my_obj + args, filename)
 
     if __name__ == "__main__":
