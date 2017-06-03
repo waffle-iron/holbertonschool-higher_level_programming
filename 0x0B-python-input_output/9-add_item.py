@@ -32,7 +32,7 @@ def add_item(filename, args):
         new_json_object = load_from_json_file(filename)
     except FileNotFoundError:
         new_json_object = []
-    save_to_json_file(my_obj + args, filename)
+    save_to_json_file(new_json_object + args, filename)
 
 if __name__ == "__main__":
     filename = "add_item.json"
