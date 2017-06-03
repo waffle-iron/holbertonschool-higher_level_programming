@@ -38,4 +38,10 @@ class Student:
         in this list must be retrieved.
         Otherwise, all attributes must be retrieved
         """
-        return (self.__dict__)
+        for item in attrs:
+            try:
+                dict_keys = {}
+                dict_keys = getattr(self, item, None)
+                return (dict_keys)
+            except AttributeError:
+                return (self.__dict__)
