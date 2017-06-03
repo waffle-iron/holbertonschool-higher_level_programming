@@ -8,7 +8,8 @@ This module contains one function `read_lines`
 
 def read_lines(filename="", nb_lines=0):
     """
-    Write a function that reads n lines of a text file (UTF8) and prints it to stdout:
+    Write a function that reads n lines of a text file
+    (UTF8) and prints it to stdout:
     Read the entire file if
     nb_lines is lower or equal to 0 OR
     greater or equal to the total number of lines of the file

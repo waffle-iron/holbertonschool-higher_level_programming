@@ -22,4 +22,3 @@ def number_of_lines(filename=""):
         for line in my_file:
             line_count += 1
         return(line_count)
-
