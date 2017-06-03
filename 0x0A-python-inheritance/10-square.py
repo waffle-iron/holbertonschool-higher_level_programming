@@ -38,5 +38,6 @@ class Square(Rectangle):
         instance method to determine area of square
         """
         return ("[Rectangle] {:d}/{:d}".
-                format(self.__width,
+                format(self.__class__.__name__,
+                       self.__width,
                        self.__height))
