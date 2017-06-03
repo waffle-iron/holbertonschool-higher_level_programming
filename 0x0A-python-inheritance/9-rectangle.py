@@ -48,6 +48,6 @@ class Rectangle(BaseGeometry):
         following rectangle description: [Rectangle] <width>/<height>
         """
         return ("[{:s}] {:d}/{:d}".
-                format(__class__.__name__,
+                format(self.__class__.__name__,
                        self.__width,
                        self.__height))
